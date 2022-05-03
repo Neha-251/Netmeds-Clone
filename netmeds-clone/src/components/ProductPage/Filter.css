@@ -1,6 +1,4 @@
-.filter-left{
-    width:19.5%;
-}
+
 .left-category{
     background-color: white;
     border-radius: 10px;
@@ -39,4 +37,12 @@
     font-weight: normal;
     font-size: 13px;
     color:gray;
+}
+.wrap>div>p{
+    color:rgb(100, 99, 99);
+    font-size: 16.2px;
+}
+.wrap>div>p:hover{
+    color:black;
+    cursor: pointer;
 }

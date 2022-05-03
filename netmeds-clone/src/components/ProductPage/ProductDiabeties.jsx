@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Products.css"
-function Products() {
+function ProductsDiabeties() {
     const [products,setProducts]=useState([]);
-    const [products1,setProducts1]=useState([]);
     const [order,setOrder]=useState("popularity");
     useEffect(()=>{
         getData()
@@ -11,18 +10,13 @@ function Products() {
         const data=await fetch("https://netmedback.herokuapp.com/products");
         const res=await data.json();
         console.log(res)
-        const filterdDataCovid=[]
         const filterdDataDiabeties=[];
         res.product.map((el)=>{
-            if(el.main=="Covid - Essentials"){
-                filterdDataCovid.push(el)
-            }
-            else if(el.main=="Diabeties"){
+            if(el.main=="Diabeties"){
                 filterdDataDiabeties.push(el)
             }
         })
-        setProducts(filterdDataCovid);
-        setProducts1(filterdDataDiabeties)
+        setProducts(filterdDataDiabeties)
     }
     function sort(x){
         const copy=[...products];
@@ -45,41 +39,36 @@ function Products() {
   return (
     <div className='product-right'>
         <div className='banner'>
-            <img src={require("../../images/banner.jpg")}></img>
+            <img src={require("../../images/bannerDia.jpg")}></img>
         </div>
         <div className='category'>
             <div className='item-title'>
                 <p>SHOP BY CATEGORY</p>
                 <div className='category-img'>
                     <div>
-                        <img src={require("../../images/covid/c-1.jpg")}/>
+                        <img src={require("../../images/diabeties/d-1.jpg")}/>
                         <div className='about'>Personal & Home...</div>
-                        <div className='discount'>UPTO 79%</div>
+                        {/* <div className='discount'>UPTO 79%</div> */}
                     </div>
                     <div>
-                        <img src={require("../../images/covid/c-2.jpg")}/>
+                        <img src={require("../../images/diabeties/d-2.jpg")}/>
                         <div className='about'>Mask, Gloves & Pr...</div>
-                        <div className='discount'>UPTO 88%</div>
+                        {/* <div className='discount'>UPTO 88%</div> */}
                     </div>
                     <div>
-                        <img src={require("../../images/covid/c-3.jpg")}/>
+                        <img src={require("../../images/diabeties/d-3.jpg")}/>
                         <div className='about'>Immunity Booster</div>
-                        <div className='discount'>UPTO 45%</div>
+                        {/* <div className='discount'>UPTO 45%</div> */}
                     </div>
                     <div>
-                        <img src={require("../../images/covid/c-4.jpg")}/>
+                        <img src={require("../../images/diabeties/d-4.jpg")}/>
                         <div className='about'>Business Essentials</div>
-                        <div className='discount'>UPTO 77%</div>
+                        <div className='discount'>UPTO 25%</div>
                     </div>
                     <div>
-                        <img src={require("../../images/covid/c-5.jpg")}/>
+                        <img src={require("../../images/diabeties/d-5.jpg")}/>
                         <div className='about'>Travel Essentials</div>
-                        <div className='discount'>UPTO 77%</div>
-                    </div>
-                    <div>
-                        <img src={require("../../images/covid/c-6.jpg")}/>
-                        <div className='about'>Oxygen Can</div>
-                        <div className='discount'>UPTO 14%</div>
+                        <div className='discount'>UPTO 45%</div>
                     </div>
                 </div>
             </div>
@@ -115,9 +104,8 @@ function Products() {
                 ))}
             </div>
         </div>
-        
     </div>
   )
 }
 
-export default Products
+export default ProductsDiabeties

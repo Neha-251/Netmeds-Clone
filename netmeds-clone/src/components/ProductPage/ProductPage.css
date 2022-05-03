@@ -3,7 +3,6 @@ body{
     margin: auto;
     background-color: rgb(243, 243, 243);
 }
-.main-page{
-    display: flex;
-    justify-content: space-between;
+.product-page>.link{
+    padding-right: 20px;
 }
