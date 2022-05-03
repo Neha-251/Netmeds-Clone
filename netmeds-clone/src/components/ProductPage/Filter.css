@@ -1,0 +1,42 @@
+.filter-left{
+    width:19.5%;
+}
+.left-category{
+    background-color: white;
+    border-radius: 10px;
+    padding:20px;
+    margin-bottom: 20px;
+}
+.heading{
+    margin-top: -10px;
+    font-size: 26px;
+}
+.subheading{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.subheading>input{
+    background-color: rgb(243, 243, 243);
+    padding: 10px;
+    margin-top: 10px;
+    border:none;
+    border-radius: 6px;
+}
+.subheading>p{
+    font-weight: normal;
+    font-size: 13px;
+    color:gray;
+}
+.wrap{
+    max-height:250px;
+    margin-top: 10px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding: 0px;
+}
+.wrap>p{
+    line-height: 25px;
+    font-weight: normal;
+    font-size: 13px;
+    color:gray;
+}

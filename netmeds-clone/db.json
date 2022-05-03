@@ -1,0 +1,247 @@
+{
+    "products":[
+        {
+            "name":"Status N95 Face Mask - White (Pack of 20)",
+            "Tag":"Covid Essentials",
+            "price":200.90,
+            "stprice":980.00,
+            "nos":1,
+            "mkt":"Chinar Forge Ltd.",
+            "brand":"Status",
+            "cat":"Masks",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/958409/status_n95_face_mask_white_pack_of_20_0_1.jpg"
+        },
+        {
+            "name":"R.M. Pharma Face Shield",
+            "Tag":"Covid Essentials",
+            "price":19.00,
+            "stprice":100.00,
+            "nos":1,
+            "mkt":"R.M. Pharma And Surgicals",
+            "brand":"R.M. Pharma",
+            "cat":"Masks",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/915736/r_m_pharma_face_shield_0_0.jpg"
+        },
+        {
+            "name":"Mahalaxmi Enterprises 3 Ply Face Mask 100's",
+            "Tag":"Covid Essentials",
+            "price":192.00,
+            "stprice":1600.00,
+            "nos":1,
+            "mkt":"Mahalaxmi Enterprises",
+            "brand":"Mahalaxmi Enterprises",
+            "cat":"Masks",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/945279/mahalaxmi_enterprises_3_ply_face_mask_100s_0_0.jpg"
+        },
+        {
+            "name":"Savlon Antiseptic Liquid 100 ml",
+            "Tag":"Covid - Essentials",
+            "price":48,
+            "stprice":48,
+            "nos":1,
+            "mkt":"Itc India Ltd",
+            "brand":"Savlon",
+            "cat":"Masks",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/406018/savlon_antiseptic_liquid_100_ml_0_1.jpg"
+        },
+        {
+            "name":"Savlon Moisture Shield Hand Wash 200 ml",
+            "Tag":"Covid - Essentials",
+            "price":95,
+            "stprice":95,
+            "nos":1,
+            "mkt":"Itc India Ltd",
+            "brand":"Savlon",
+            "cat":"Personal & Home Essentials",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/412632/savlon_moisture_shield_hand_wash_200_ml_0.jpg"
+        },
+        {
+            "name":"Savlon Surface Disinfectant Spray 70 gm",
+            "Tag":"Covid - Essentials",
+            "price":89.00,
+            "stprice":89.00,
+            "nos":1,
+            "mkt":"Itc India Ltd",
+            "brand":"Savlon",
+            "cat":"Personal & Home Essentials",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/947970/savlon_surface_disinfectant_spray_70_gm_0_0.jpg"
+        },
+        {
+            "name":"Ciphands Daily Surface Disinfectant Spray 75 ml",
+            "Tag":"Covid - Essentials",
+            "price":94.05,
+            "stprice":94.05,
+            "nos":1,
+            "mkt":"Cipla Ltd(Otc)",
+            "brand":"Cipla",
+            "cat":"Personal & Home Essentials",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/912261/ciphands_daily_surface_disinfectant_spray_75_ml_0_3.jpg"
+        },
+        {
+            "name":"Ciphands Rinse Free & Non-Sticky Antiseptic Hand Sanitizer Gel 500 ml",
+            "Tag":"Covid - Essentials",
+            "price":236.55,
+            "stprice":249,
+            "nos":1,
+            "mkt":"Cipla Ltd(Otc)",
+            "brand":"Cipla",
+            "cat":"Personal & Home Essentials",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/914763/ciphands_rinse_free_non_sticky_antiseptic_hand_sanitizer_gel_500_ml_0_1.jpg"
+        },
+        {
+            "name":"Maxirich Multivitamin and Minerals Softgels 10's",
+            "Tag":"Covid - Essentials",
+            "price":60.50,
+            "stprice":110.00,
+            "nos":10,
+            "mkt":"Cipla Ltd(Otc)",
+            "brand":"Cipla",
+            "cat":"Immunity Booster",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/915906/maxirich_multivitamin_and_minerals_softgels_10s_0_0.jpg"
+        },
+        {
+            "name":"Puric InstaSafe Hygiene Hand Sanitizer Gel - Camphor & Citrus 100 ml",
+            "Tag":"Covid - Essentials",
+            "price":50.00,
+            "stprice":50.00,
+            "nos":1,
+            "mkt":"Reliance Retail Limited",
+            "brand":"Reliance",
+            "cat":"Immunity Booster",
+            "main":"Covid - Essentials",
+            "img":"https://www.netmeds.com/images/product-v1/600x600/939990/puric_instasafe_hygiene_hand_sanitizer_gel_camphor_citrus_100_ml_0_0.jpg"
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Immunity Booster",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Immunity Booster",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Business Essentials",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Business Essentials",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Business Essentials",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Business Essentials",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Travel Essentials",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Travel Essentials",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Travel Essentials",
+            "main":"Covid - Essentials",
+            "img":""
+        },
+        {
+            "name":"",
+            "Tag":"",
+            "price":0,
+            "stprice":0,
+            "nos":0,
+            "mkt":"",
+            "brand":"",
+            "cat":"Travel Essentials",
+            "main":"Covid - Essentials",
+            "img":""
+        }
+        
+        
+        
+    ]
+}

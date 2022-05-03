@@ -1,0 +1,114 @@
+.product-right {
+    width: 79%;
+    margin: 0% 1.5%;
+}
+
+.product-right>.banner>img {
+    width: 100%;
+    border-radius: 10px;
+}
+.category{
+    height:180px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.sort{
+    text-align: right;
+    height:50px;
+    padding-top: 50px;
+}
+.sort>button{
+    margin-left: 10px;
+    border:1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    padding:5px 25px;
+}
+.sort>.selected{
+    border:1px solid rgb(50, 174, 177);
+    color:rgb(50, 174, 177);
+    border-radius: 5px;
+}
+.sort>button:hover{
+    border:1px solid rgb(50, 174, 177);
+    color:rgb(50, 174, 177);
+    cursor: pointer;
+}
+.show-products{
+    
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding:5px 15px;
+}
+.append-products{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+.product-card{
+    border:1px solid rgb(189, 188, 188);
+    height:330px;
+    padding:15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-card>img{
+    width:67%;
+}
+.product-details{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height:100%;
+}
+.product-details>.name{
+    font-size: 14.4px;
+    font-weight: 600;
+    line-height:22px;
+    height:66px;
+}
+.product-details>.mkt{
+    font-size: 13px;
+    color:gray;
+    font-style: italic;
+    line-height:23px;
+}
+.product-details>.price{
+    color:rgb(90, 89, 89);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 25px;
+}
+.product-details>.price>.red{
+    font-size: 16px;
+    color:rgb(239, 66, 129);
+}
+.product-details>.stprice{
+    font-size: 13px;
+    color:gray;
+    padding:6px 0px;
+}
+.product-details>.stprice>.strike{
+    text-decoration: line-through;
+    padding-left: 6px;
+}
+.product-details>button{
+    background-color: rgb(50, 174, 177);
+    color:white;
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: 700;
+    border:none;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+.product-details>button:hover{
+    cursor: pointer;
+}

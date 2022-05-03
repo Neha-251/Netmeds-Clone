@@ -1,0 +1,9 @@
+body{
+    width:98%;
+    margin: auto;
+    background-color: rgb(243, 243, 243);
+}
+.main-page{
+    display: flex;
+    justify-content: space-between;
+}
