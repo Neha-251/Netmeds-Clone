@@ -20,6 +20,7 @@ export const Navbar =()=>{
             
               
         </div>
+        
     )
 }
 
