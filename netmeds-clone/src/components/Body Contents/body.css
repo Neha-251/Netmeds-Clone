@@ -1,0 +1,7 @@
+/* ---------CAROUSEL--------- */
+
+.carousel-indicators button{
+    min-height: 1rem;
+    max-width: 1rem;
+    border-radius: 50%;  
+}

@@ -1,0 +1,133 @@
+.navbar {
+	display: flex;
+	text-align: center;
+	justify-content: space-around;
+	height: 90px;
+	background-color: #32aeb1;
+	/* border: 1px solid red; */
+}
+.navbox {
+	justify-content: center;
+	display: flex;
+	width: 1280px;
+	padding: 15px;
+	/* border: 1px solid red; */
+}
+.input-div {
+	display: flex;
+	height: 49px;
+	width: 670px;
+	margin-left: 15px;
+	background-color: whitesmoke;
+	border-radius: 5px;
+	/* border: 1px solid red; */
+}
+.input-div > div {
+	height: 22.8px;
+	width: 160px;
+	margin: 10px;
+	/* border: 1px solid red;*/
+}
+.navinput {
+	height: 46px;
+	width: 485px;
+	border-radius: 5px;
+	border: transparent;
+}
+.logoimage-div {
+	/* height: 60px; */
+	width: 168px;
+	background-color: #32aeb1;
+	/* border: 1px solid red; */
+}
+.logoimage {
+	height: 100%;
+	width: 100%;
+}
+.blank {
+	background: url(https://www.netmeds.com/assets/gloryweb/images/icons/upload_rx.svg) no-repeat left center;
+    background-size: 24px;
+    height:20px;
+    display: inline-block;
+	margin-left: 10px;
+	width: 82.3px;
+	padding: 15px;
+    padding-left: 10px;
+	color: whitesmoke;
+    font-weight:bold;
+    font-size: 14px;
+	/* border: 1px solid red; */
+}
+.cart {
+	background: url(https://www.netmeds.com/assets/gloryweb/images/icons/cart_icon.svg) no-repeat left center;
+    background-size: 24px;
+    height:20px;
+    display: inline-block;
+	width: 70px;
+	padding: 15px;
+    padding-left: 10px;
+	color: whitesmoke;
+    font-weight:bold;
+    font-size: 14px;
+	/* border: 1px solid red; */
+}
+.signin {
+	background: url(https://www.netmeds.com/assets/gloryweb/images/icons/profile_icon.svg) no-repeat left center;
+    background-size: 24px;
+    height:20px;
+    display: inline-block;
+	width: 130px;
+	padding: 15px;
+    padding-left: 10px;
+    font-weight:bold;
+    font-size: 14px;
+	color: whitesmoke;
+}
+
+/* ..............................navbar1.............. */
+
+.navbar1 {
+	display: flex;
+	margin: auto;
+	height: 72px;
+	color: whitesmoke;
+	background-color: #32aeb1;
+	/* border: 1px solid red; */
+	justify-content: center;
+}
+.types {
+	display: flex;
+	height: 46px;
+	width: 1006px;
+	justify-content: space-between;
+	/* border: 1px solid red; */
+	margin: auto;
+}
+.types > div {
+	display: flex;
+
+	justify-content: center;
+	margin: auto;
+}
+.types > div > p {
+	margin: auto;
+}
+
+/* --------------Nav_Menu-------------- */
+.navmenu {
+	/* border: 1px solid red; */
+	width: 76%;
+	height: 42px;
+	margin: auto;
+	display: flex;
+	flex-wrap: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navmenu a {
+	text-decoration: none;
+	color: black;
+	font-size: 13px;
+	line-height: 14px;
+}
