@@ -43,18 +43,18 @@ export const Navbar1 = () => {
 export const Nav_Menu = () => {
     return (
         <div className="navmenu">
-            <a href="/covid">Covid Essentials</a>
-            <a href="/diabeties">Diabetes</a>
-            <a href="/covid">Eyewear</a>
-            <a href="/diabeties">Ayush</a>
-            <a href="/diabeties">Ayurvedic</a>
-            <a href="/covid">Homeopathy</a>
-            <a href="/diabeties">Fitness</a>
-            <a href="/covid">Mom & Baby</a>
-            <a href="#">Devices</a>
-            <a href="#">Surgicals</a>
-            <a href="#">Sexual Wellness</a>
-            <a href="#">Treatments</a>
+            <Link to="/covid">Covid Essentials</Link>
+            <Link to="/diabeties">Diabetes</Link>
+            <Link to="/covid">Eyewear</Link>
+            <Link to="/diabeties">Ayush</Link>
+            <Link to="/diabeties">Ayurvedic</Link>
+            <Link to="/covid">Homeopathy</Link>
+            <Link to="/diabeties">Fitness</Link>
+            <Link to="/covid">Mom & Baby</Link>
+            <Link to="#">Devices</Link>
+            <Link to="#">Surgicals</Link>
+            <Link to="#">Sexual Wellness</Link>
+            <Link to="#">Treatments</Link>
         </div>
     )
 }

@@ -44,7 +44,7 @@ function ProductsDiabeties() {
   return (
     <div className='product-right'>
         <div className='banner'>
-            <img src={require("../../images/banner.jpg")} alt=""></img>
+            <img src={require("../../images/bannerDia.jpg")} alt=""></img>
         </div>
         <div className='category'>
             <div className='item-title'>
