@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Footer } from './components/Footer/Footer.jsx';
 import {AllRoutes} from "./Routes/Routes";
@@ -7,7 +8,6 @@ import {AllRoutes} from "./Routes/Routes";
 function App() {
   return (
     <div className="App">
-      
       <AllRoutes/>
       <Footer/>
     </div>
