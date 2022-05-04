@@ -1,7 +1,7 @@
 import React from 'react'
 import Filters from './Filters'
 import ProductsDiabeties from './ProductDiabeties'
-import "./Routes.css"
+import "./productRouters.css"
 function Diabeties() {
   return (
     <div className='dia'>

@@ -1,4 +1,5 @@
 import './App.css';
+import { Footer } from './components/Footer/Footer.jsx';
 import {AllRoutes} from "./Routes/Routes";
 
 // import {Carousel_Div} from "./components/Body Contents/body"
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       
       <AllRoutes/>
-      
+      <Footer/>
     </div>
   );
 }
