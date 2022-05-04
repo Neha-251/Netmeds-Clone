@@ -16,4 +16,4 @@ function Diabeties() {
   )
 }
 
-export default Diabeties
+export {Diabeties} ;

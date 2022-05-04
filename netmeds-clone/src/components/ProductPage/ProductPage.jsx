@@ -4,7 +4,10 @@ import Products from './Products'
 import { useState } from 'react'
 import {Link, Route,Routes} from "react-router-dom"
 import "./ProductPage.css"
-import ProductsDiabeties from './ProductDiabeties'
+import ProductsDiabeties from './ProductDiabeties';
+
+
+
 function ProductPage() {
   const [product,setProduct]=useState("covid")
   return (
@@ -19,4 +22,4 @@ function ProductPage() {
   )
 }
 
-export default ProductPage
+export {ProductPage};
