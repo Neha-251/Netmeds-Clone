@@ -1,5 +1,7 @@
 
-import {React} from 'react';
+// import {React} from 'react';
+
+import * as React from 'react';
 import "./footer.css"
 export const Footer=()=>{
     return (
@@ -17,42 +19,51 @@ export const Footer=()=>{
                <div className="F_second">
 
                     <div className='F_divheight'>
-                        <p>one</p>
-                        <p>two </p>
-                        <p>there</p>
-                        <p>auer</p>
-                        <p>hajfk</p>
-                        <p>asdnfkjn</p>
+                        <p>About Netmeds</p>
+                        <p>Customers Speak</p>
+                        <p>In the News</p>
+                        <p>Career</p>
+                        <p>Terms and Conditions</p>
+                        <p>Privacy Policy</p>
+                        <p>Fees and Payments Policy</p>
+                        <p>Shipping and Delivery Policy</p>
                     </div>
                     <div className='F_divheight'>
                       
-                        <p>one</p>
-                        <p>two </p>
-                        <p>there</p>
-                        <p>auer</p>
-                        <p>hajfk</p>
-                        <p>asdnfkjn</p>
+                        <p>Browse by A-Z</p>
+                        <p>Browse by Manufacturers</p>
+                        <p>Health Articles</p>
+                        <p>Offers / Coupons</p>
+                        <p>FAQs</p>
+                      
                     </div>
                     <div className='F_divheight'>
-                        <p>one</p>
-                        <p>two </p>
-                        <p>there</p>
-                        <p>auer</p>
-                        <p>hajfk</p>
-                        <p>asdnfkjn</p>
+                        <p>Patients Alike</p>
+                        <p>Facebook</p>
+                        <p>Twitter</p>
+                        <p>LinkedIn</p>
+                        <p>Youtube</p>
+                        <p>Refer & Earn</p>
                     </div>
                     <div className='F_divheight'>
-                        <p>one</p>
-                        <p>two </p>
-                        <p>there</p>
-                        <p>auer</p>
-                        <p>hajfk</p>
-                        <p>asdnfkjn</p>
+                        <p>Get a free subscription to our health and 
+                            fitness tip and stay tuned to our latest offers</p>
+                        <div>two</div> 
+                        <div>three</div>
+                       
                     </div>
                     
 
                </div>
-               <div className="F_third"></div>
+               <div className="F_third">
+                 <div>
+                     <p>Medicine</p>
+                     <p>Wellness</p>
+                     <p>Lab tests</p>
+                     <p>Beauty</p>
+                     <p>Copyright© 2022. All Rights Reserved.</p>
+                 </div>
+               </div>
             </div>
       
         </div>

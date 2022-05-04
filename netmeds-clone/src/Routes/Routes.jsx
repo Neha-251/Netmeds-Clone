@@ -4,13 +4,13 @@ import { Cart } from "../components/Cart/Cart";
 import { Navbar, Navbar1, Nav_Menu } from "../components/Nav/Navbar";
 import { ProductDetails } from "../components/ProductDetailsPage/ProductDetails";
 
-
 export const AllRoutes = () => {
     return (
         <>
             <Navbar />
             <Navbar1 />
             <Nav_Menu />
+           
             <Routes>
                 <Route path="/productdetails" element={<ProductDetails />}> </Route>
                 <Route path="/productpage" element={<ProductPage />}> </Route>
