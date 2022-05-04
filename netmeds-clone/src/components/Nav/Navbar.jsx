@@ -18,7 +18,7 @@ export const Navbar = () => {
                 <Link to="/cart" >
                     <div className="cart">Cart</div>
                 </Link>
-                <div className="signin">Sign In/Sign up</div>
+                <Link to="/account/login" className="signin">Sign In/Sign up</Link>
             </div>
         </div>
     )
