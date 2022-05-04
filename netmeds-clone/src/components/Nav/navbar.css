@@ -5,11 +5,12 @@
 	height: 90px;
 	background-color: #32aeb1;
 	/* border: 1px solid red; */
+	
 }
 .navbox {
 	justify-content: center;
 	display: flex;
-	width: 1280px;
+	width: 100vw;
 	padding: 15px;
 	/* border: 1px solid red; */
 }
@@ -90,7 +91,7 @@
 	display: flex;
 	margin: auto;
 	height: 72px;
-	color: whitesmoke;
+	color: #c5f6f7;
 	background-color: #32aeb1;
 	/* border: 1px solid red; */
 	justify-content: center;
@@ -111,6 +112,7 @@
 }
 .types > div > p {
 	margin: auto;
+	margin-left: 6px;
 }
 
 /* --------------Nav_Menu-------------- */

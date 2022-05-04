@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes } from 'react-router-dom'
 import Filters from './Filters'
 import Products from './Products'
-import "./Routes.css";
+import "./productRouters.css";
 function CovidRoutes() {
   return (
     <div className='dia'>
@@ -17,4 +17,4 @@ function CovidRoutes() {
   )
 }
 
-export default CovidRoutes
+export default CovidRoutes;

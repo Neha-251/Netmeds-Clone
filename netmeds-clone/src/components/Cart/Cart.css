@@ -3,6 +3,7 @@
     width: 80%;
     margin: 20px auto;
     font-weight: 700;
+    background-color: white;
 }
 
 .cartMainContainer{
@@ -44,14 +45,32 @@
     cursor: pointer;
 }
 
+.radioBtn_promoCode_null{
+    height: 16px;
+    width: 14px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3px;
+    padding-top: 0;
+    padding-left: 3px;
+    background-color: rgb(36,174,177);
+    color: white;
+    font-size: 13px;
+}
+
 .promoCode_h3{
-    margin-top: 0px;
+    margin-top: 3px;
     font-size: 15px;
     color: grey;
 }
 
 .downArrow{
     margin-left: 30%;
+    margin-top: 6px;
     cursor: pointer;
 }
 
@@ -94,4 +113,107 @@
     font-size: 14px;
     font-weight: 500;
     color: rgb(171, 171, 171);
+}
+
+.inp_div button{
+    color: red;
+    margin-left: 70%;
+    margin-top: -5px;
+}
+
+.inp_div p{
+    font-size: 10px;
+    color: rgb(36,174,177);
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+
+.applyPromo_none{
+    display: none;
+}
+
+.applyPromo_block{
+    display: block;
+}
+
+.apply_promoCode_radio{
+    height: 17px;
+    width: 17px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.apply_promoCode_radio_null{
+    height: 16px;
+    width: 14px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3px;
+    padding-top: 0;
+    padding-left: 3px;
+    background-color: rgb(36,174,177);
+    color: white;
+    font-size: 13px;
+}
+
+
+.paymentDetails_Maindiv{
+    padding: 15px;
+}
+
+
+.paymentDetails_Maindiv > div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+.paymentDetails_Maindiv > div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+.paymentDetails_Maindiv > div:nth-child(4){
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+
+.paymentDetails_Maindiv > div {
+    display: flex;
+    
+}
+
+
+.savings_div{
+    padding: 10px;
+    background-color: rgb(224, 251, 224);
+    font-size: 12px;
+    color: mediumseagreen;
+}
+
+
+.totalAmount_mainDiv{
+    display: flex;
+    justify-content: space-between
+}
+
+.totalAmount_mainDiv button{
+    background-color: lightseagreen;
+    color: white;
+    font-size: 17px;
+    padding: 10px 35px;
+    border-radius: 5px;
+    border: none;
 }
