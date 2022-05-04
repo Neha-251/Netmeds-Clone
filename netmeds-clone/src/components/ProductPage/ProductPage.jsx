@@ -19,4 +19,4 @@ function ProductPage() {
   )
 }
 
-export default ProductPage
+export  {ProductPage};

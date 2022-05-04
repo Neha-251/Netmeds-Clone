@@ -40,4 +40,4 @@ function ProductDetails() {
   )
 }
 
-export default ProductDetails
+export {ProductDetails};
