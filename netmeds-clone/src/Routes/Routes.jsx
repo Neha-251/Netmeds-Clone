@@ -12,7 +12,7 @@ export const AllRoutes = () => {
             <Navbar1 />
             <Nav_Menu />
             <Routes>
-                <Route path="/productdetails" element={<ProductDetails />}> </Route>
+                <Route path="/productdetails/:id" element={<ProductDetails />}> </Route>
                 <Route path="/productpage" element={<ProductPage />}> </Route>
                 <Route path="/cart" element={<Cart />}> </Route>
 
