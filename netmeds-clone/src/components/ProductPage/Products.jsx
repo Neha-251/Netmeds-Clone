@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import ProductDetails from '../ProductDetailsPage/ProductDetails';
 import "./Products.css"
 function Products() {
     const [products,setProducts]=useState([]);
@@ -102,15 +104,19 @@ function Products() {
             </div>
             <div className='append-products'>
                 {products.map((product)=>(
-                    <div className='product-card'>
+                    <div className='product-cards' >
+                        <Link className='link-details' to={`/products/${product._id}`}>
+                        <div className='product-card'>
                         <img src={product.img} alt=""></img>
-                        <div className='product-details'>
+                        <div className='product-details' >
                             <div className='name'>{product.name}</div>
                             <div className='mkt'>Mkt: {product.mkt}</div>
                             <div className='price'>Best price* <span className='red'>Rs. {product.price}</span></div>
                             <div className='stprice'>MRP <span className='strike'>Rs. {product.stprice}</span></div>
-                            <button>ADD TO CART</button>
                         </div>
+                        </div>
+                        </Link>
+                        <button>ADD TO CART</button>
                     </div> 
                 ))}
             </div>

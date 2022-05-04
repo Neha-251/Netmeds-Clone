@@ -17,4 +17,4 @@ function CovidRoutes() {
   )
 }
 
-export {CovidRoutes} ;
+export default CovidRoutes
