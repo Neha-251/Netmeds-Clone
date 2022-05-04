@@ -5,8 +5,6 @@ import { Navbar, Navbar1, Nav_Menu } from "../components/Nav/Navbar";
 import { ProductDetails } from "../components/ProductDetailsPage/ProductDetails";
 import CovidRoutes from "../components/ProductPage/covidRoutes";
 import Diabeties from "../components/ProductPage/diabetiesRoutes";
-
-
 export const AllRoutes = () => {
     return (
         <>
@@ -18,9 +16,7 @@ export const AllRoutes = () => {
                 <Route path="/diabeties" element={<Diabeties/>}></Route>
                 <Route path="/products/:id" element={<ProductDetails/>}></Route>
                 <Route path="/cart" element={<Cart />}> </Route>
-            </Routes>
-            
-
+            </Routes>  
         </>
     )
 }
