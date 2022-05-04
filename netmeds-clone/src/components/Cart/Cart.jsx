@@ -13,6 +13,12 @@ export const Cart = () => {
     const [applyCodeS3, setApplyCodeS3] = useState(true);
     const [applyCodeS4, setApplyCodeS4] = useState(true);
 
+
+    const [mrpTotal, setMrpTotal] = useState(0);
+    const [discount, setDiscount] = useState(0);
+    const [totalAmount, setTotalAmount] = useState(0);
+
+
     const handleCodeApply = () => {
 
         if (codeStatus === false) {
@@ -130,15 +136,15 @@ export const Cart = () => {
 
                         <div>
                             <div className="leftSidePayment_subDiv">MRP Total</div>
-                            <div className="rightSidePayment_subDiv">Rs 0</div>
+                            <div className="rightSidePayment_subDiv">Rs {mrpTotal}</div>
                         </div>
                         <div>
                             <div className="leftSidePayment_subDiv">Netmeds Discount</div>
-                            <div className="rightSidePayment_subDiv">Rs 0</div>
+                            <div className="rightSidePayment_subDiv">Rs {discount}</div>
                         </div>
                         <div>
                             <div className="leftSidePayment_subDiv total_p">Total Amount</div>
-                            <div className="rightSidePayment_subDiv">Rs 0</div>
+                            <div className="rightSidePayment_subDiv">Rs {totalAmount}</div>
                         </div>
 
                         <div className="savings_div">TOTAL SAVINGS</div>
