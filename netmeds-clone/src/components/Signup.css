@@ -1,0 +1,84 @@
+.Signup {
+    box-sizing: border-box;
+    align-items: center;
+    /* border: solid; */
+    display: flex;
+    width: 1000px;
+    margin: 120px auto;
+    height: 70vh;
+    border-radius: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  
+  .signupImg {
+    width: 50%;
+    height: 100%;
+    /* border: solid red; */
+  }
+  
+  .signupImg img {
+    width: 90%;
+    height: 90%;
+  }
+  
+  #details {
+    width: 50%;
+    /* border: solid; */
+    height: 100%;
+    text-align: left;
+  }
+  
+  #details h2{
+      margin-left: 10%;
+  }
+  
+  #verify {
+    width: 100%;
+    margin-top: 40px;
+    padding: 15px 0px;
+    background-color: rgb(36, 174, 177);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: 700;
+  }
+  
+  #form {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+  }
+  
+  label {
+    display: block;
+    font-size: 10px;
+    color: rgb(36, 179, 192);
+    font-weight: 700;
+    line-height: 19.5px;
+    margin-top: 8%;
+  }
+  
+  #email,
+  #firstName,
+  #lastName {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    font-size: 15px;
+    line-height: 24px;
+    /* padding:3px 0px 3px 40px; */
+  }
+  
+  ::placeholder {
+      color: rgb(198, 198, 198);
+  }
+  
+  #email:focus,
+  #firstName:focus,
+  #lastName:focus {
+    outline: none;
+  }
+  
