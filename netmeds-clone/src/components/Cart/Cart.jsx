@@ -1,10 +1,31 @@
 import "./Cart.css";
 import {TiArrowSortedDown, TiArrowSortedUp} from "react-icons/ti";
 import { Button } from "@mui/material";
+import { useState } from "react";
 
 
 
 export const Cart = () => {
+
+    const [codeStatus, setCodeStatus] = useState(true);
+
+    const handleCodeApply = () => {
+
+        if(codeStatus === false){
+            setCodeStatus(true);
+            
+            console.log(codeStatus);
+        } else {
+            setCodeStatus(false);
+            
+
+            console.log(codeStatus);
+
+        }
+    }
+
+
+
     return (
         <div className="cartMain">
             <h1>Order Summary</h1>
@@ -20,7 +41,7 @@ export const Cart = () => {
                         <div>
                             <h5>APPLY PROMOCODE / NMS SUPERCASH</h5>
                         </div>
-                        <div className="promocode_div">
+                        <div className="promocode_div" onClick={handleCodeApply}>
                             <div>
                                 <div className="radioBtn_promoCode"></div>
                             </div>
@@ -32,8 +53,9 @@ export const Cart = () => {
                             
                         </div>
 
-                        <div className="applyPromo">
+                        <div className={ codeStatus===true ? "applyPromo_none" : "applyPromo_block"}>
                                 <div className="inp_div">
+                                    <p>PROMOCODE</p>
                                     <input className="code_inp" type="text" placeholder="Have a promocode? Enter Here" />
                                     <Button>Apply</Button>
                                 </div>

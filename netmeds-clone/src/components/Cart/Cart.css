@@ -96,3 +96,24 @@
     font-weight: 500;
     color: rgb(171, 171, 171);
 }
+
+.inp_div button{
+    color: red;
+    margin-left: 70%;
+    margin-top: -5px;
+}
+
+.inp_div p{
+    font-size: 10px;
+    color: rgb(0, 81, 255);
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+
+.applyPromo_none{
+    display: none;
+}
+
+.applyPromo_block{
+    display: block;
+}
