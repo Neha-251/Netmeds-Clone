@@ -12,7 +12,7 @@ function ProductsDiabeties() {
         console.log(res)
         const filterdDataDiabeties=[];
         res.product.map((el)=>{
-            if(el.main=="Diabeties"){
+            if(el.main==="Diabeties"){
                 filterdDataDiabeties.push(el)
             }
         })
@@ -39,34 +39,34 @@ function ProductsDiabeties() {
   return (
     <div className='product-right'>
         <div className='banner'>
-            <img src={require("../../images/bannerDia.jpg")}></img>
+            <img src={require("../../images/bannerDia.jpg")} alt=""> </img>
         </div>
         <div className='category'>
             <div className='item-title'>
                 <p>SHOP BY CATEGORY</p>
                 <div className='category-img'>
                     <div>
-                        <img src={require("../../images/diabeties/d-1.jpg")}/>
+                        <img src={require("../../images/diabeties/d-1.jpg")} alt=""/>
                         <div className='about'>Personal & Home...</div>
                         {/* <div className='discount'>UPTO 79%</div> */}
                     </div>
                     <div>
-                        <img src={require("../../images/diabeties/d-2.jpg")}/>
+                        <img src={require("../../images/diabeties/d-2.jpg")} alt=""/>
                         <div className='about'>Mask, Gloves & Pr...</div>
                         {/* <div className='discount'>UPTO 88%</div> */}
                     </div>
                     <div>
-                        <img src={require("../../images/diabeties/d-3.jpg")}/>
+                        <img src={require("../../images/diabeties/d-3.jpg")} alt=""/>
                         <div className='about'>Immunity Booster</div>
                         {/* <div className='discount'>UPTO 45%</div> */}
                     </div>
                     <div>
-                        <img src={require("../../images/diabeties/d-4.jpg")}/>
+                        <img src={require("../../images/diabeties/d-4.jpg")} alt=""/>
                         <div className='about'>Business Essentials</div>
                         <div className='discount'>UPTO 25%</div>
                     </div>
                     <div>
-                        <img src={require("../../images/diabeties/d-5.jpg")}/>
+                        <img src={require("../../images/diabeties/d-5.jpg")} alt=""/>
                         <div className='about'>Travel Essentials</div>
                         <div className='discount'>UPTO 45%</div>
                     </div>
@@ -92,7 +92,7 @@ function ProductsDiabeties() {
             <div className='append-products'>
                 {products.map((product)=>(
                     <div className='product-card'>
-                        <img src={product.img}></img>
+                        <img src={product.img} alt=""></img>
                         <div className='product-details'>
                             <div className='name'>{product.name}</div>
                             <div className='mkt'>Mkt: {product.mkt}</div>
