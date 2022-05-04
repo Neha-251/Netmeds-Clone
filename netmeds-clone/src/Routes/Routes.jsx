@@ -14,14 +14,15 @@ export const AllRoutes = () => {
             <Navbar1 />
             <Nav_Menu />
             <ProductPage/>
-
             <Routes>
                 <Route path="/covid" element={<CovidRoutes />}></Route>
                 <Route path="/diabeties" element={<Diabeties />}></Route>
+<<<<<<< HEAD
                 <Route path="/cart" element={ <Cart/> }></Route>
+=======
+                <Route path="/products/:id" element={<ProductDetails/>}></Route>
+>>>>>>> af78969bb2288b888da75b1db1d33c432bd77f30
             </Routes>
-
-
         </>
     )
 
