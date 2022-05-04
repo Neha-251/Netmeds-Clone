@@ -1,0 +1,97 @@
+
+.cartMain{
+    width: 80%;
+    margin: 20px auto;
+    font-weight: 700;
+}
+
+.cartMainContainer{
+    display: flex;
+    color: rgb(83, 82, 82);
+    letter-spacing: 1px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    margin: 50px auto;
+    border: 1px solid blue;
+}
+
+.cartContainer_1{
+    border: 1px solid red;
+    width: 70%;
+    padding: 5px;
+
+}
+
+.cartContainer_2{
+    border: 1px solid green;
+    width: 25%;
+    padding: 5px;
+
+}
+
+.promocode_div{
+    display: flex;
+    gap: 10px;
+}
+
+.radioBtn_promoCode{
+    height: 17px;
+    width: 17px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.promoCode_h3{
+    margin-top: 0px;
+    font-size: 15px;
+    color: grey;
+}
+
+.downArrow{
+    margin-left: 30%;
+    cursor: pointer;
+}
+
+.code_div{
+    border: 2px dotted grey;
+    margin: 5px auto;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+  
+
+}
+
+.code_div > div:nth-child(2){
+    width: 75%;
+    margin: 0;
+}
+
+.code_heading{
+    margin-top: 0;
+    font-size: 15px;
+
+}
+
+.code_details{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.code_inp{
+    width: 200px;
+    outline: none;
+    border: none;
+    height: 25px;
+    font-size: 15px;
+}
+
+.code_inp::placeholder{
+    /* letter-spacing: 0.2px; */
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(171, 171, 171);
+}

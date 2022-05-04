@@ -4,6 +4,7 @@ import {CovidRoutes} from '../components/ProductPage/covidRoutes';
 import {Diabeties} from '../components/ProductPage/diabetiesRoutes';
 import { Navbar } from "../components/Nav/Navbar.jsx";
 import { Navbar1, Nav_Menu } from "../components/Nav/Navbar.jsx";
+import {Cart} from "../components/Cart/Cart";
 
 
 export const AllRoutes = () => {
@@ -17,6 +18,7 @@ export const AllRoutes = () => {
             <Routes>
                 <Route path="/covid" element={<CovidRoutes />}></Route>
                 <Route path="/diabeties" element={<Diabeties />}></Route>
+                <Route path="/cart" element={ <Cart/> }></Route>
             </Routes>
 
 
