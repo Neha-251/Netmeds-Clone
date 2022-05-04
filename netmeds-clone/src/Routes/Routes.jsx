@@ -20,7 +20,6 @@ export const AllRoutes = () => {
                 <Route path="/covid" element={<CovidRoutes />}></Route>
                 <Route path="/diabeties" element={<Diabeties />}></Route>
                 <Route path="/products/:id" element={<ProductDetails />}>
-
                 </Route>
             </Routes>
 
