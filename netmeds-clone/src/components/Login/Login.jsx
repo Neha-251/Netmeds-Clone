@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import './Login.css';
 import Image1 from '../../images/login.png';
 import Image2 from '../../images/google-icon.png';
 import Image3 from '../../images/facebook-icon.png';
+import { Navigate, useNavigate } from "react-router-dom";
+import { UserContext } from "../contexts/userContext";
 function Login() {
+  const {handleNumber}=useContext(UserContext)
+  const navigate=useNavigate()
   const [number,setNumber]=useState("");
-  const [valid,setValid]=useState("");
+  const {valid}=useContext(UserContext)
   useEffect(()=>{
     
   },[])
-  const handleNumber=()=>{
-    if(number.length==0){
-      setValid("empty");
-    }
-    else if(number.length>0 && number.length<10){
-      setValid("invalid");
-    }
+ 
+  if(valid=="valid"){
+    // navigate("/signup");
+    return <Navigate to="/signup" replace={false}/>
   }
-  console.log("number",number);
   return (
     <div className="loginBox">
       <div className="loginImg">
-      <img src={Image1} alt="" />
+      <img src={require("../../images/login.png")} alt="" />
       </div>
       <div className="inputBox">
         <div id="signup">
@@ -33,12 +33,12 @@ function Login() {
         </div>
 
        <div id="form">
-       <form action="" id="inputForm">
+       <div action="" id="inputForm" >
             <label id="label" htmlFor="">PHONE NUMBER</label>
             <div className="number">+ 91 |<input onChange={(e)=>setNumber(e.target.value)} id='numInput' type="number" placeholder="Enter mobile no" /></div>
             <p>{valid=="empty"?"Please enter your Mobile Number!":valid=="invalid"?"Please enter valid Mobile Number!":""}</p>
-            <button id="otp" onClick={()=>handleNumber()}>USE OTP</button> 
-        </form>
+            <button onClick={()=>handleNumber(number)} id="otp" type="submit" >USE OTP</button>
+        </div>
        </div>
 
         <div id="btn">
