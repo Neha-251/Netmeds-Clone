@@ -1,6 +1,6 @@
 import React from "react";
 import './Signup.css';
-import Image1 from '../image/login.png';
+import Image1 from '../../images/login.png';
 
 function Signup() {
   return (
