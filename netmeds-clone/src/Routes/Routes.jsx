@@ -2,6 +2,7 @@ import { ProductPage } from "../components/ProductPage/ProductPage";
 import { Route, Routes } from 'react-router-dom';
 import { Cart } from "../components/Cart/Cart";
 import { Navbar, Navbar1, Nav_Menu } from "../components/Nav/Navbar";
+import {Body} from "./components/Body Contents/body"
 import { ProductDetails } from "../components/ProductDetailsPage/ProductDetails";
 import CovidRoutes from "../components/ProductPage/covidRoutes";
 import Diabeties from "../components/ProductPage/diabetiesRoutes";
@@ -29,6 +30,8 @@ export const AllRoutes = () => {
                 <Route path="/diabeties" element={<Diabeties />}></Route>
                 <Route path="/products/:id" element={<ProductDetails />}></Route>
                 <Route path="/account/login" element={<Login/>}></Route>
+                <Route path="/account/" element={<Body/>}></Route>
+
             </Routes>
 
         </>
