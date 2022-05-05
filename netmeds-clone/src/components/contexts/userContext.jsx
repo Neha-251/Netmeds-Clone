@@ -6,6 +6,7 @@ export const UserContext=createContext();
 export const UserContextProvider=({children})=>{
     const [gotoHome,setGotoHome]=useState("no")
     const [alldetails,setAllDetails]=useState(false)
+    const [res,setRes]=useState("")
     const [details,setDetails]=useState({
         firstName:"",
         lastName:"",
@@ -13,9 +14,7 @@ export const UserContextProvider=({children})=>{
         password:"",
         number:""
     }); 
-    const [valid,setValid]=useState("");
     const [num,setNum]=useState("")
-    
     useEffect(()=>{
         if(alldetails==true){
             addData(details);
@@ -23,19 +22,10 @@ export const UserContextProvider=({children})=>{
     })
     const handleNumber=(value)=>{
        
-        console.log("value",value)
-        
-        if(value.length==0){
-        setValid("empty");
-        }
-        else if(value.length>0 && value.length<10){
-        setValid("invalid");
-        }
-        else{
-            setValid("valid");
-            setNum(value)
-        
-        }
+        console.log("value",value.num)
+        console.log(value.res);
+        setNum(value.num);
+        setRes(value.response)
   }
     const handleDetails=(data)=>{
         if(num=="" || data.firstName=="" || data.lastName=="" || data.email==""){
@@ -66,5 +56,5 @@ export const UserContextProvider=({children})=>{
       
     }
     
-    return <UserContext.Provider value={{handleNumber,valid,handleDetails,alldetails,gotoHome}}>{children}</UserContext.Provider>
+    return <UserContext.Provider value={{handleNumber,handleDetails,alldetails,gotoHome,res}}>{children}</UserContext.Provider>
 }
