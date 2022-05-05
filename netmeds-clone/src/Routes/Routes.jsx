@@ -5,6 +5,7 @@ import { Navbar, Navbar1, Nav_Menu } from "../components/Nav/Navbar";
 import { ProductDetails } from "../components/ProductDetailsPage/ProductDetails";
 import CovidRoutes from "../components/ProductPage/covidRoutes";
 import Diabeties from "../components/ProductPage/diabetiesRoutes";
+import {Body} from "../components/Body Contents/body"
 
 export const AllRoutes = () => {
     return (
@@ -12,6 +13,7 @@ export const AllRoutes = () => {
             <Navbar />
             <Navbar1 />
             <Nav_Menu />
+          
            
             <Routes>
                 <Route path="/productdetails" element={<ProductDetails />}> </Route>

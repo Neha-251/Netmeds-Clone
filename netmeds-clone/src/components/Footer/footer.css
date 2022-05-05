@@ -2,7 +2,7 @@
 
 .F_footer{
     height: 568px;
-   
+   background-color: white;
     /* margin: auto; */
     justify-items: center;
     /* border :1px solid red; */
@@ -29,6 +29,7 @@
 	/* height: 60px; */
 	width: 180px;
     height: 40px;
+    margin-top: 20px;
 
 	/* border: 1px solid red; */
 }
@@ -70,4 +71,12 @@ text-align: left;
 .F_third>div{
     display: flex;
     justify-content: space-between;
+}
+.F_google{
+    display: flex;
+    justify-content: space-evenly;
+}
+.F_google>div>img{
+    height: 40px;
+    width: 90px;
 }

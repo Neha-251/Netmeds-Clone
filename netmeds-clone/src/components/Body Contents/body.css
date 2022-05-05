@@ -5,3 +5,80 @@
     max-width: 1rem;
     border-radius: 50%;  
 }
+
+.B_three{
+    display: flex;
+    justify-content: space-between;
+}
+
+.B_three>div {
+    height: 86px;
+    width: 486px;
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: white;
+    /* border: 1px solid black; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.B_three>div>img{
+    width: 60px;
+    padding: 10px;
+    height:60px 
+}
+.B_previous{
+    display: flex;
+    margin-top: 20px;
+}
+.B1{
+   height: 130px;
+   width: 624px;
+   /* border: 1px solid red; */
+}
+.B2{
+    height: 122px;
+    width: 118px;
+    /* border: 1px solid red; */
+ }
+
+.B3{
+   height: 128px;
+   width: 541px;
+   /* border: 1px solid red; */
+}
+.B4{
+    height: 127px;
+    width: 177px;
+    /* border: 1px solid red; */
+}
+.B_Trending{
+    display: flex;
+    justify-content: space-around;
+}
+.B_Trending>div{
+    height: 224px;
+    width: 436px;
+    border-radius: 10px;
+    /* border:1px solid red; */
+}
+
+.B_category{
+   display: flex;
+   justify-content: space-around;
+}
+.B_category>div{
+    height: 260px;
+    width: 260px;
+}
+.B_category>div>img{
+    height: 100%;
+    width: 100%;
+}
+.p_image>img{
+    width: 100%;
+}
+
+.textContent>div{
+    width: 97.5%;
+    /* border: 1px solid red; */
+    margin: auto;
+}
