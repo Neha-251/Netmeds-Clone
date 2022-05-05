@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import './Signup.css';
 import Image1 from '../../images/login.png';
-<<<<<<< Updated upstream
-=======
+
+
 import { UserContext } from "../contexts/userContext";
 import { useNavigate } from "react-router-dom";
->>>>>>> Stashed changes
+
 
 function Signup() {
   const {gotoHome}=useContext(UserContext)
