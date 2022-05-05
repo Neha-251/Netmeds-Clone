@@ -8,6 +8,7 @@ import Diabeties from "../components/ProductPage/diabetiesRoutes";
 import Login from "../components/Login/Login";
 import { Footer } from "../components/Footer/Footer";
 import Signup from "../components/Login/Signup";
+import { Body } from "../components/Body Contents/body";
 
 export const AllRoutes = () => {
     return (
@@ -22,6 +23,7 @@ export const AllRoutes = () => {
                 <Route path="/products/:id" element={<ProductDetails />}></Route>
                 <Route path="/account/login" element={<Login/>}></Route>
                 <Route path="/signup" element={<Signup/>}></Route>
+                <Route path="/" element={<Body/>}></Route>
             </Routes>
 
         </>
