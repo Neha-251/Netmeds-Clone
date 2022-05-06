@@ -22,7 +22,7 @@ export const Cart = () => {
 
 
     const [mrpTotal, setMrpTotal] = useState(0);
-    const [discount, setDiscount] = useState(0);
+    // const [discount, setDiscount] = useState(0);
     const [discount1, setDiscount1] = useState(0);
 
     const [totalAmount, setTotalAmount] = useState(0);
