@@ -6,7 +6,8 @@ export const UserContext=createContext();
 export const UserContextProvider=({children})=>{
     const [gotoHome,setGotoHome]=useState("no")
     const [alldetails,setAllDetails]=useState(false)
-    const [res,setRes]=useState("")
+    const [res,setRes]=useState("");
+    const [singleperson,setSingleperson]=useState("")
     const [details,setDetails]=useState({
         firstName:"",
         lastName:"",
@@ -37,7 +38,7 @@ export const UserContextProvider=({children})=>{
                 firstName:data.firstName,
                 lastName:data.lastName,
                 email:data.email,
-                password:1234,
+                password:"1234",
                 number:num
             })
             setAllDetails(true)
@@ -46,7 +47,7 @@ export const UserContextProvider=({children})=>{
     const addData=(details)=>{
         console.log(details)
         
-        fetch("https://netmedback.herokuapp.com/register",{
+         fetch("https://netmedback.herokuapp.com/register",{
          method:"POST",
          headers:{
            "Content-Type":"application/json"
@@ -55,6 +56,12 @@ export const UserContextProvider=({children})=>{
        }).then(()=>setGotoHome("yes"))
       
     }
+    const handleExisting=(response)=>{
+        setRes(response)
+    }
+    const singleUser=(user)=>{
+        setSingleperson(user)
+    }
     
-    return <UserContext.Provider value={{handleNumber,handleDetails,alldetails,gotoHome,res}}>{children}</UserContext.Provider>
+    return <UserContext.Provider value={{handleNumber,handleDetails,alldetails,gotoHome,res,handleExisting,singleUser,singleperson}}>{children}</UserContext.Provider>
 }

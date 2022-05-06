@@ -12,11 +12,14 @@ import { OtpContext } from "../contexts/otpContext";
 import { Nav_Menu } from "../Nav/Navbar";
 function Login() {
   const {handleNumber}=useContext(UserContext)
+  const {singleUser}=useContext(UserContext)
+  const {handleExisting}=useContext(UserContext)
   const setUpRecaptcha=useContext(OtpContext)
   const [num,setNum]=useState("");
   const [otp,setOtp]=useState("");
   const [confirmObj,setConfirmObj]=useState("");
   const [valid,setValid]=useState("");
+  const navigate=useNavigate()
   const getOtp=async(e)=>{
     e.preventDefault();
     if(num.length==0){
@@ -28,10 +31,39 @@ function Login() {
     else{
       const response=await setUpRecaptcha(num)
       console.log("response",response);
-      handleNumber({num,response});
-      setValid("valid");
-      setConfirmObj(response)
-      console.log(num)
+      const data=await fetch("https://netmedback.herokuapp.com/users");
+      const respondData=await data.json();
+      const resData=respondData.users
+      for(var i=0;i<resData.length;i++){
+        if(resData[i].number==num){
+          console.log("yes")
+          singleUser(resData[i])
+          handleExisting(response)
+          navigate("/existing")
+        }
+        else{
+          handleNumber({num,response});
+          setValid("valid");
+          setConfirmObj(response);
+          
+        }
+      }
+      // respondData.users.map((user)=>{
+      //   if(num==user.number){
+      //     console.log(user.number,num)
+      //     console.log("matched")
+      //     singleUser(user)
+      //     handleExisting(response)
+      //     navigate("/existing")
+      //   }
+      //   else{
+      //     handleNumber({num,response});
+      //     setValid("valid");
+      //     setConfirmObj(response)
+      //     console.log(num,user.number)
+      //   }
+      // })
+      
     }
     
   }
