@@ -1,101 +1,56 @@
-import { height } from "@mui/system";
+import { color, height } from "@mui/system";
 import * as React from "react";
 
 import "./body.css";
-// import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-
-export const Carousel_Div = () => {
-	return (
-		<div class="carousel_div">
-			<div
-				id="carouselExampleIndicators"
-				class="carousel slide"
-				data-bs-ride="carousel"
-			>
-				<div class="carousel-indicators">
-					<button
-						type="button"
-						data-bs-target="#carouselExampleIndicators"
-						data-bs-slide-to="0"
-						class="active"
-						aria-current="true"
-						aria-label="Slide 1"
-					></button>
-					<button
-						type="button"
-						data-bs-target="#carouselExampleIndicators"
-						data-bs-slide-to="1"
-						aria-label="Slide 2"
-					></button>
-					<button
-						type="button"
-						data-bs-target="#carouselExampleIndicators"
-						data-bs-slide-to="2"
-						aria-label="Slide 3"
-					></button>
-					<button
-						type="button"
-						data-bs-target="#carouselExampleIndicators"
-						data-bs-slide-to="3"
-						aria-label="Slide 4"
-					></button>
-				</div>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img
-							src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1651498134_sdvbnm.jpg"
-							alt="..."
-						/>
-					</div>
-					<div class="carousel-item">
-						<img
-							src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1651338093_Web_Home89.jpg"
-							alt="..."
-						/>
-					</div>
-					<div class="carousel-item">
-						<img
-							src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1651498383_asdasdas.jpg"
-							alt="..."
-						/>
-					</div>
-				</div>
-
-				<button
-					class="carousel-control-prev"
-					type="button"
-					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide="prev"
-				>
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button
-					class="carousel-control-next"
-					type="button"
-					data-bs-target="#carouselExampleIndicators"
-					data-bs-slide="next"
-				>
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
-		</div>
-	);
-};
+import  {Slider} from "./slider.jsx";
 
 
 export const Body = ()=>{
 	return (
 		<div>
-			<div className="p_image"><img src="https://www.netmeds.com/images/cms/aw_rbslider/slides/1651585029_Web_Home_Kareena_Banner_Final.jpg" alt="" /></div>
+		     <Slider/>
 
-			  <div className="B_three">
+			  {/* <div className="B_three">
 			   <div><img src="https://www.netmeds.com/assets/gloryweb/images/icons/Wellnessnew.svg" alt="" />
 				</div>
 			   <div><img src="https://www.netmeds.com/assets/gloryweb/images/icons/Beautynew.svg" alt="" /></div>
 			   <div><img src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg" alt="" /></div>
-		      </div>
+		      </div> */}
+				<div className="three-sec-wrap">
+			<div className="onesec">
+				<div className="f-two">
+					<img className="thumb" src="https://www.netmeds.com/assets/gloryweb/images/icons/Wellnessnew.svg"/>
+					<div>
+						<h3>Order Medicine</h3>
+						<h5>Save Upto 25% off</h5>
+					</div>
+				</div>
+				<img className="arrow" src="https://www.netmeds.com/assets/version1649433944/gloryweb/images/icons/expand_more.svg"/>
+			</div>
+			<div className="onesec">
+				<div className="f-two">
+					<img className="thumb" src="https://www.netmeds.com/assets/gloryweb/images/icons/Beautynew.svg"/>
+					<div>
+						<h3>Beauty</h3>
+						<h5>Save Upto 40% off</h5>
+					</div>
+				</div>
+				<img className="arrow" src="https://www.netmeds.com/assets/version1649433944/gloryweb/images/icons/expand_more.svg"/>
+			</div>
+			<div className="onesec">
+				<div className="f-two">
+					<img className="thumb" src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg"/>
+					<div>
+						<h3>Wellness</h3>
+						<h5>Save Upto 15% off</h5>
+					</div>
+				</div>
+				<img className="arrow" src="https://www.netmeds.com/assets/version1649433944/gloryweb/images/icons/expand_more.svg"/>
+			</div>
+		</div>
+
+
+
 
 			  <div className="B_previous">
 				  <div className="B1">
@@ -163,11 +118,12 @@ export const Body = ()=>{
 			  <h2> Health Concerns</h2><br />
 			  <div className="B_category">
 				  
-				  <div><img src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/diabetic-care.jpg?v=1" alt="" /></div>
-				  <div><img src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/de-addiction.jpg?v=1" alt="" /></div>
-				  <div><img src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/lung-care.jpg?v=1" alt="" /></div>
-				  <div><img src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/weight-care.jpg?v=1" alt="" /></div>
-				  <div><img src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/women-s-care.jpg?v=1" alt="" /></div>
+				  <div style={{textAlign:"center",backgroundcolor:"white"}}><img  style={{height:"60%",width:"60%" }} src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/diabetic-care.jpg?v=1" alt="" />
+				    <p><b>Test</b></p></div>
+				  <div style={{textAlign:"center"}}><img style={{height:"60%",width:"60%" }}src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/de-addiction.jpg?v=1" alt="" /><p><b>care</b></p></div>
+				  <div style={{textAlign:"center"}}><img style={{height:"60%",width:"60%" }}src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/lung-care.jpg?v=1" alt="" /><p><b>Lung Care</b></p></div>
+				  <div style={{textAlign:"center"}}><img style={{height:"60%",width:"60%" }}src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/weight-care.jpg?v=1" alt="" /><p><b>Weight Care</b></p></div>
+				  <div style={{textAlign:"center"}}><img style={{height:"60%",width:"60%" }}src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/women-s-care.jpg?v=1" alt="" /><p><b>Women's care</b></p></div>
 			  </div>
 
 
