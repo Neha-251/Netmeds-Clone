@@ -1,0 +1,89 @@
+
+
+.addressImage_background{
+    background-image: url("../../images/orderpage.png");
+    /* background-color: red; */
+    margin-top: -260px;
+    margin-left: 0;
+    margin-right: 0;
+    position: fixed;
+    height: 830px;
+    width: 1500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    
+}
+
+
+.address-left_div{
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    opacity: 70%;
+}
+
+
+.side_div_forAddress{
+    background-color: white;
+    position: absolute;
+    width: 400px;
+    height: 700px;
+    margin-left: 1070px;
+    padding: 20px;
+    margin-top: 50px;
+    
+    
+}
+
+.addressForm input {
+    height: 35px;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+
+.addressForm input::placeholder {
+    font-size: 15px;
+    
+    color: rgb(141, 140, 140);
+
+}
+
+.inp_full{
+    width: 300px;
+}
+
+
+.div_phone_inp{
+    display: flex;
+    
+}
+
+.div_phone_inp> div{
+    background-color: white;
+    border-right: 1px solid black;
+    font-weight: 600;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-right: 5px;
+
+}
+
+.addressSubmit{
+    width: 90%;
+    padding: 20px auto;
+    background-color: rgb(36,174,177);
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+}
