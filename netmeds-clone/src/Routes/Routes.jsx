@@ -1,6 +1,8 @@
 import { ProductPage } from "../components/ProductPage/ProductPage";
 import { Route, Routes } from 'react-router-dom';
 import { Cart } from "../components/Cart/Cart";
+import {OrderReview} from "../components/OrderReview/orderReview";
+import { AddressDiv } from "../components/addressDiv/addressDiv";
 import { Navbar, Navbar1, Nav_Menu } from "../components/Nav/Navbar";
 import { ProductDetails } from "../components/ProductDetailsPage/ProductDetails";
 import CovidRoutes from "../components/ProductPage/covidRoutes";
@@ -19,6 +21,8 @@ export const AllRoutes = () => {
             <Nav_Menu />
             <Routes>
                 <Route path="/cart" element={<Cart />}></Route>
+                <Route path="/orderReview" element={<OrderReview/>}></Route>
+                <Route path="/addressdiv" element={<AddressDiv/>}></Route>
                 <Route path="/covid" element={<CovidRoutes />}></Route>
                 <Route path="/diabeties" element={<Diabeties />}></Route>
                 <Route path="/products/:id" element={<ProductDetails />}></Route>
