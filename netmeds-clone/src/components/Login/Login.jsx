@@ -70,19 +70,20 @@ if(valid=="valid"){
         </p>
         </div>
 
-       <div id="form">
+       <div className="form">
        {/* <form onSubmit={getOtp} action="" id="inputForm" >
             <label id="label" htmlFor="">PHONE NUMBER</label>
             <PhoneInput defaultCountry="IN" value={num} onChange={setNum} id='numInput' placeholder="Enter mobile no" />
             <p className="validity">{valid=="empty"?"Please enter your Mobile Number!":valid=="invalid"?"Please enter valid Mobile Number!":""}</p>
-            <button id="otp" type="submit" >USE OTP</button>
+            <button id="otp" type="submit" ></button>
         </form> */}
-        <form onSubmit={getOtp}>
-          <div id="sign-in-button"></div>
-          <PhoneInput defaultCountry="IN" placeholder="mobile number" value={num} onChange={setNum}></PhoneInput>
+        <form onSubmit={getOtp} id='inputForm'>
+        <label id="label" htmlFor="">PHONE NUMBER</label>
+          {/* <div id="sign-in-button"></div> */}
+          <PhoneInput id='numInput' defaultCountry="IN" placeholder="Enter Your Mobile no" value={num} onChange={setNum}></PhoneInput>
           <div id="recaptcha-container"/>
           <p className="validity">{valid=="empty"?"Please enter your Mobile Number!":valid=="invalid"?"Please enter valid Mobile Number!":""}</p>
-          <button type="submit">Submit</button>
+          <button type="submit" id="otp">USE OTP</button>
       </form>
        </div>
 
