@@ -14,6 +14,7 @@ import { Body } from "../components/Body Contents/body";
 import ExistingUser from "../components/Login/existingUser";
 import{Payment} from "../components/Payments/Payment"
 import UserDetails from "../components/UserDetails/UserDetails";
+import {Success} from "../components/Success/Success"
 
 export const AllRoutes = () => {
     return (
@@ -34,6 +35,7 @@ export const AllRoutes = () => {
                 <Route path="/existing" element={<ExistingUser/>}></Route>
                 <Route path="/payment" element={<Payment></Payment>}></Route>
                 <Route path="/account/user-details" element={<UserDetails/>}></Route>
+                <Route path="/success" element={<Success></Success>}></Route>
             </Routes>
 
         </>

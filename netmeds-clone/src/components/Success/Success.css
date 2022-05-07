@@ -1,0 +1,29 @@
+.maindiv{
+    width: 75%;
+    margin: auto;
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.name{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: grey;
+    text-align: center;
+}
+.placed{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: grey;
+}
+.thank{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(50,174,177);
+    padding: 20px;
+}
