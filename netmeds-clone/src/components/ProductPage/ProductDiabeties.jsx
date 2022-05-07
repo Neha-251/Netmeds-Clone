@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./Products.css"
 function ProductsDiabeties() {
     const [products,setProducts]=useState([]);
@@ -50,13 +50,20 @@ function ProductsDiabeties() {
         setOrder(x);
     }
     const userID=JSON.parse(localStorage.getItem("users"));
-    console.log(userID._id)
+    const navigate=useNavigate();
     const addToCart=(product_id)=>{
-        setUserandproduct({
-            product_id:product_id,
-            user_id:userID._id
-        })
-        setCart(cart+1);
+        if(userID==null){
+            alert("Sign in first")
+            navigate("/account/login")
+        }
+        else{
+            setUserandproduct({
+                product_id:product_id,
+                user_id:userID._id
+            })
+            setCart(cart+1);
+        }
+        
     }
     
     function postData(){
@@ -69,7 +76,7 @@ function ProductsDiabeties() {
             body:JSON.stringify(userandproduct)
         })
     }
-    console.log(userandproduct)
+    
   return (
     <div className='product-right'>
         <div className='banner'>
