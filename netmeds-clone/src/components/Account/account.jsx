@@ -1,3 +1,5 @@
+
+
 import * as React from "react";
 import "../Your Account/Account.css"
 
@@ -8,7 +10,7 @@ export const Account= ()=>{
             <div className="headerr">
                 <h2>Your Account</h2>
             </div>
-​
+
             <div className="first-row">
                 <div className="top-left">
                     <img src="https://www.netmeds.com/msassets/images/icons/profile-icon.svg" alt=""/>
@@ -33,14 +35,14 @@ export const Account= ()=>{
                     </div>
                 </div>
             </div>
-​
+
             <div className="second-row">
                 <div className="btm-left">
                     <div className="sideMenu active">
                         <div className="logoDiv">
                             <img className="menuLogo" src="	https://www.netmeds.com/msassets/images/icons/account_information_blue.svg" alt=""/>
                         </div>
-                        <a>Account Information</a>
+                        <p>Account Information</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -48,7 +50,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/wallet_grey.svg" alt=""/>
                         </div>
-                        <a>My Wallet</a>
+                        <p>My Wallet</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -56,7 +58,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/favorite.svg" alt=""/>
                         </div>    
-                        <a>My WishList</a>
+                        <p>My WishList</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -64,7 +66,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/offer_inactive.svg" alt=""/>
                         </div>    
-                        <a>Offers</a>
+                        <p>Offers</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -72,7 +74,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/netmeds-elite_inactive.svg" alt=""/>
                         </div>
-                        <a>Netmeds First</a>
+                        <p>Netmeds First</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -80,7 +82,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="	https://www.netmeds.com/msassets/images/icons/delivery_inactive.svg" alt=""/>
                         </div>
-                        <a>Delivery Address</a>
+                        <p>Delivery Address</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -88,7 +90,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="	https://www.netmeds.com/msassets/images/icons/my-prescription_inactive.svg" alt=""/>
                         </div>
-                        <a>My Prescription</a>
+                        <p>My Prescription</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -96,7 +98,7 @@ export const Account= ()=>{
                         <div className="logoDiv">   
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/subscription_grey.svg" alt=""/>
                         </div>
-                        <a>My Subscription</a>
+                        <p>My Subscription</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -104,7 +106,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="	https://www.netmeds.com/msassets/images/icons/refer_earn_grey.svg" alt=""/>
                         </div>
-                        <a>Refer & Earn</a>
+                        <p>Refer & Earn</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -112,7 +114,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/support_inactive.svg" alt=""/>
                         </div>
-                        <a>Help</a>
+                        <p>Help</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -120,7 +122,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="	https://www.netmeds.com/msassets/images/icons/document_inactive.svg" alt=""/>
                         </div>
-                        <a>Legal Information</a>
+                        <p>Legal Information</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -128,7 +130,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/contact-us_grey.svg" alt=""/>
                         </div>
-                        <a>Contact Us</a>
+                        <p>Contact Us</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -136,7 +138,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/document_inactive.svg" alt=""/>
                         </div>
-                        <a>Rate Us</a>
+                        <p>Rate Us</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                     <hr/>
@@ -144,7 +146,7 @@ export const Account= ()=>{
                         <div className="logoDiv">
                             <img className="menuLogo" src="https://www.netmeds.com/msassets/images/icons/lock_grey.svg" alt=""/>
                         </div>
-                        <a>Logout</a>
+                        <p>Logout</p>
                         <img className="arr" src="https://www.netmeds.com/msassets/images/icons/keyboard_arrow_big_right.svg" alt=""/>
                     </div>
                 </div>
