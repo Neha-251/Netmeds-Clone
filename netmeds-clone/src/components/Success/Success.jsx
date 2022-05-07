@@ -2,9 +2,11 @@ import "./Success.css";
 import { Link } from "react-router-dom";
 
 export const Success= ()=>{
+    var name = JSON.parse(localStorage.getItem("users"));
+    
     return (
         <div className="maindiv">
-            <div className="name">Dear Sharan</div>
+            <div className="name">Dear {name.firstName}</div>
             <div className="imgdiv">
                 <img src="https://c.tenor.com/0AVbKGY_MxMAAAAM/check-mark-verified.gif"></img>
             </div>
