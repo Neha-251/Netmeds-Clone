@@ -6,13 +6,15 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { FaLuggageCart, FaRupeeSign } from "react-icons/fa";
 import { useState, useEffect, useReducer } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 
 
 export const OrderReview = () => {
 
     const [userlogin, setUserlogin] = useState(false);
+    const navigate = useNavigate();
 
     const [codeStatus, setCodeStatus] = useState(true);
     const [applyCodeS1, setApplyCodeS1] = useState(true);
@@ -31,7 +33,9 @@ export const OrderReview = () => {
 
     const [deleteStatus, setDeleteStatus] = useState(true);
 
-    const [reRender, setReRender] = useReducer(x => x + 1, 0)
+    const [reRender, setReRender] = useReducer(x => x + 1, 0);
+
+    const [reg_address, setReg_address] = useState([]);
 
 
     const handleCodeApply = () => {
@@ -103,7 +107,7 @@ export const OrderReview = () => {
             let data = await res.json();
 
 
-            let userId = "6273943f60ef31a11fcc6b98";
+            let userId = "6275e8307fe4bb73452dcfc6";
 
             let user_based_data = [];
             
@@ -121,6 +125,39 @@ export const OrderReview = () => {
             calculateTotal(user_based_data);
 
 
+            let res_user = await fetch("https://netmedback.herokuapp.com/users");
+            let data_user = await res_user.json();
+            console.log('data_user', data_user);
+
+            let user_ph;
+            for(let i = 0; i < data_user.users.length; i++) {
+                if(data_user.users[i]._id === userId){
+                    user_ph = data_user.users[i].number;
+                }
+            }
+
+
+            let res_add = await fetch("https://netmedback.herokuapp.com/checkout");
+
+            let data_add = await res_add.json();
+            console.log('data_add', data_add.checkout)
+
+         
+            for(let i = 0; i < data_add.checkout.length; i++){
+                if(data_add.checkout[i].phone === user_ph){
+                    setReg_address(data_add.checkout[i]);
+                }
+            }
+
+
+            // setReg_address(data_add.checkout[0]);
+
+
+            if(reg_address.length === 0){
+                navigate("/addressdiv")
+            }
+
+
         }
         catch (err) {
             console.log('err', err);
@@ -130,6 +167,9 @@ export const OrderReview = () => {
     }
 
     console.log("cartData", cartData);
+    
+    console.log('reg_address', reg_address)
+
 
  
 
@@ -268,6 +308,32 @@ export const OrderReview = () => {
                         }
 
                     </div>
+
+                    <div className="showAddress">
+                        <p>DELIVERY ADDRESS</p>
+                        
+                        {
+                        
+                            
+                                <div>
+                                    <p>{ reg_address.firstName } {reg_address.lastName}</p>
+                                    <p>{ reg_address.address },</p>
+                                    <p>{ reg_address.landmark }</p>
+                                    <p>{ reg_address.city } - {reg_address.pincode} { reg_address.state }.</p>
+                                    <p>+91 - { reg_address.phone  }</p>
+                                    
+                                </div>
+                            
+                    
+
+                        }
+
+                    </div>
+
+
+
+
+
                     <Link to="/addressdiv">
                         <button className="goto_address_btn">Add Address</button>
                     </Link>
