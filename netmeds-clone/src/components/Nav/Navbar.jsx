@@ -6,6 +6,11 @@ import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 
 export const Navbar = () => {
+
+
+    const [reload, setreload] = React.useState(false);
+
+
     const userData=JSON.parse(localStorage.getItem("users"));
     console.log(userData);
 
@@ -21,7 +26,13 @@ export const Navbar = () => {
                 <Link to="/cart" >
                     <div className="cart">Cart</div>
                 </Link>
-                <Link to={userData==null?"/account/login":"/account/user-details"} className="signin">{userData==null?"Sign In/Sign up":userData.firstName}</Link>
+                <Link to={userData==null?"/account/login":"/account/user-details"}  className="signin">
+                    <div>
+                       {userData==null?"Sign In/Sign up": userData.firstName } 
+                    </div>
+                    
+                </Link>
+                
             </div>
         </div>
     )

@@ -118,7 +118,11 @@ export const Cart = () => {
             
 
 
-            let userId = "62760e357fe4bb73452dd215";
+            let userdata = JSON.parse(localStorage.getItem("users"))
+
+            let userId = userdata._id;
+
+
 
             let user_based_data = [];
             
