@@ -7,6 +7,7 @@ export const UserContextProvider=({children})=>{
     const [gotoHome,setGotoHome]=useState("no")
     const [alldetails,setAllDetails]=useState(false)
     const [singleperson,setSingleperson]=useState("")
+    const [payment,setPayment]=useState(false)
     console.log(singleperson)
     const [details,setDetails]=useState({
         firstName:"",
@@ -15,11 +16,24 @@ export const UserContextProvider=({children})=>{
         password:"",
         number:""
     }); 
+    const [userandproduct,setUserandproduct]=useState({
+        product_id:"",
+        user_id:""
+    });
     useEffect(()=>{
         if(alldetails==true){
             addData(details);
         }
-    })
+        if(payment){
+            setUserandproduct({
+                product_id:null,
+                user_id:userID._id
+            })
+            removeCart()
+        }
+    },[payment==true])
+    const userID=JSON.parse(localStorage.getItem("users"));
+    
     const handleDetails=(data)=>{
         if(data.firstName=="" || data.lastName=="" || data.email==""){
             alert ("Fill all the data")
@@ -48,9 +62,21 @@ export const UserContextProvider=({children})=>{
        }).then(()=>{setGotoHome("yes");localStorage.setItem("users",JSON.stringify(details))})
       
     }
+    const afterPayment=(x)=>{
+        setPayment(x)
+    }
     const singleUser=(user)=>{
         setSingleperson(user)
     }
-    
-    return <UserContext.Provider value={{handleDetails,alldetails,gotoHome,singleUser,singleperson,details}}>{children}</UserContext.Provider>
+    function removeCart(){
+        fetch("https://netmedback.herokuapp.com/carts",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(userandproduct)
+        })
+        console.log(userandproduct)
+    }
+    return <UserContext.Provider value={{handleDetails,alldetails,gotoHome,singleUser,singleperson,details,payment,afterPayment}}>{children}</UserContext.Provider>
 }
