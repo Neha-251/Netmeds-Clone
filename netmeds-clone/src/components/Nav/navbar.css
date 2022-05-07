@@ -133,4 +133,22 @@
 	color: black;
 	font-size: 13px;
 	line-height: 14px;
+
+}
+
+
+.showCartItem{
+	height: 15px;
+	width: 18px;
+	margin-top: -40px;
+	margin-left: 10px;
+	font-size: 13px;
+	background-color: deeppink;
+	position: absolute;
+	border-radius: 50%;
+	display: block;
+}
+
+.notShowCart{
+	display: none;
 }

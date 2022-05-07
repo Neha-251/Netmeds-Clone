@@ -107,7 +107,10 @@ export const OrderReview = () => {
             let data = await res.json();
 
 
-            let userId = "62760e357fe4bb73452dd215";
+            let userdata = JSON.parse(localStorage.getItem("users"))
+
+            let userId = userdata._id;
+
 
             let user_based_data = [];
             
@@ -141,27 +144,30 @@ export const OrderReview = () => {
 
             let data_add = await res_add.json();
             console.log('data_add', data_add.checkout)
+            console.log('data_add[1]', data_add.checkout[1].phone)
+            console.log('user_ph', user_ph)
 
          
-            for(let i = 0; i < data_add.checkout.length; i++){
-                if(data_add.checkout[i].phone === user_ph){
-                    setReg_address(data_add.checkout[i]);
-                }
-            }
+            // for(let i = 0; i < data_add.checkout.length; i++){
+            //     if(data_add.checkout[i].phone === user_ph){
+            //         setReg_address(data_add.checkout[i]);
+            //         console.log('data_add.checkout[i]', data_add.checkout[i])
+            //     }
+            // }
 
+
+            data_add.checkout.forEach((el) => {
+                console.log('el', el.phone)
+
+                if(el.phone === user_ph){
+                            setReg_address(el);
+                }
+            })
 
             // setReg_address(data_add.checkout[0]);
 
 
-            setTimeout(()=> {
-
-                console.log("reg_address.length", reg_address.length);
-                if(reg_address.length === -1){
-                    navigate("/addressdiv")
-                } else {
-                    navigate("/orderReview");
-                }
-            }, 2000)
+          
             
 
 
@@ -177,6 +183,19 @@ export const OrderReview = () => {
     
     console.log('reg_address', reg_address)
 
+    console.log("reg_address.length", reg_address);
+
+    // useEffect(()=> {
+    //     setTimeout(()=> {
+
+    //         console.log("reg_address.length", reg_address.length);
+    //         if(reg_address.length === -1){
+    //             navigate("/addressdiv")
+    //         } else {
+    //             navigate("/orderReview");
+    //         }
+    //     }, 2000)
+    // })
 
  
 

@@ -51,7 +51,7 @@ function Signup() {
               <input type="text" onChange={(e)=>setOtp(e.target.value)} placeholder="Enter OTP"></input>
               <button type="submit" id="verify">VERIFY</button>
             </form>
-            
+
         </div>
         </div>
     </div>

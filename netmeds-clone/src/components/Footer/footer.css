@@ -55,7 +55,7 @@
 .F_divheight{
 
     height: 350px;
-    width: 238px;
+    width: 248px;
     /* border :1px solid red; */
     justify-content: left;
 
@@ -74,9 +74,9 @@ text-align: left;
 }
 .F_google{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .F_google>div>img{
-    height: 40px;
-    width: 90px;
+    height: 34px;
+    width: 115px;
 }
