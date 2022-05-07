@@ -1,0 +1,179 @@
+​
+.account-container{
+    width: 80%;
+    margin: auto;
+}
+​
+.first-row{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.top-left{
+    background-color: white;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    display: flex;
+    height: auto;
+    width: 30%;
+    text-align: left;
+}
+.top-left img{
+    width: 55px;
+    height: 55px;
+    place-self: center;
+    margin: 0 10px 0 20px
+}
+.accName{
+    margin-bottom: 0;
+}
+.accGmail{
+    margin-bottom: 0;
+    margin-top: 8px;
+    color: grey;
+    font-size: 14px;
+} 
+.accMob{
+    margin-bottom: 0;
+    margin-top: 0;
+    color: grey;
+    font-size: 14px;
+}
+​
+​
+.top-right{
+    background-color: white;
+    border-radius: 10px;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    width: 67%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 100px;
+}
+.one-opt{
+    text-align: center;
+}
+.one-opt img{
+    width: 48px;
+    height:48px;
+}
+.one-opt p{
+    font-size: 12px;
+    /* font-weight: bold; */
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+​
+.second-row{
+    margin-top: 20px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btm-left{
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 20px;
+    box-sizing: border-box;
+   
+    height: auto;
+    width: 30%;
+    text-align: left;
+}
+.sideMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.active{
+    font-weight: bold;
+}
+.sideMenu a{
+    margin-left: -40px;
+    margin-top:0;
+    margin-bottom:0;
+}
+.logoDiv{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    margin-left: 10px;
+    align-items: center;
+}
+.menuLogo{
+    width: 32px;
+    object-fit: scale-down;
+    place-self: center;
+}
+.arr{
+    margin-right: 10%;
+}
+.btm-left hr{
+    opacity: 0.3;
+    width: 70%;
+    margin-left:70px;
+}
+​
+.btm-right{
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 67%;
+    padding: 20px 20px;
+    height: max-content;
+    /* display: flex; */
+}
+.upper{
+    display: flex;
+    
+}
+.log-info{
+    width: 50%;
+}
+.personal-info{
+    width: 50%;
+}
+.box-head{
+    font-size: 13px;
+    color: grey;
+    margin-top: 0px;
+    margin-bottom: 18px;
+}
+.indSec{
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+.indSec hr{
+    opacity: 0.3;
+    width: 90%;
+    margin:0;
+}
+.ques{
+    margin-bottom: 0;
+    color: #24aeb1;
+    font-size: 11px;
+    font-weight: bold;
+}
+.data{
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+.mod-btn{
+    text-align: end;
+    margin-right: 30px;
+    box-sizing: border-box;
+}
+.mod-btn button{
+    border: none;
+    width:100px;
+    height:40px;
+    color: rgba(255, 0, 0, 0.705);
+    letter-spacing: 1px;
+    font-weight: bold;
+}

@@ -373,7 +373,7 @@ export const Cart = () => {
                                 </div>
                             </div>
 
-                            <div className="savings_div">TOTAL SAVINGS</div>
+                            <div className="savings_div">TOTAL SAVINGS {discount1}</div>
 
                             <div className="totalAmount_mainDiv">
 
