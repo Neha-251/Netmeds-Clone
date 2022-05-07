@@ -103,12 +103,23 @@ export const OrderReview = () => {
             let data = await res.json();
 
 
-            setCartData(data.cart);
-            calculateTotal(data.cart);
+            let userId = "6273943f60ef31a11fcc6b98";
 
-           
+            let user_based_data = [];
+            
+            for(let i = 0; i < data.cart.length; i++){
+                if(data.cart[i].user_id === userId){
+                    user_based_data.push(data.cart[i]);
+                }
+            }
 
             console.log("data", data)
+            console.log("user_based_data", user_based_data);
+
+
+            setCartData(user_based_data);
+            calculateTotal(user_based_data);
+
 
         }
         catch (err) {
