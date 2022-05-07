@@ -4,21 +4,17 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/userContext';
 function ExistingUser() {
     const [otp,setOtp]=useState("");
-    const {res}=useContext(UserContext);
     const {singleperson}=useContext(UserContext)
+    console.log("q",singleperson)
     const navigate=useNavigate()
     const verifyOtp=async(e)=>{
         e.preventDefault();
         if(otp=="" || otp==null){
-        return
+        alert("Fill the OTP")
         }
-        try{
-            await res.confirm(otp);
-            localStorage.setItem("user",JSON.stringify(singleperson));
-            navigate("/")
-        }
-        catch(err){
-        console.log(err)
+        if(otp==1234){
+          localStorage.setItem("users",JSON.stringify(singleperson))
+          navigate("/")
         }
     }
   return (

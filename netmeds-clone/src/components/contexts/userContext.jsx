@@ -6,8 +6,8 @@ export const UserContext=createContext();
 export const UserContextProvider=({children})=>{
     const [gotoHome,setGotoHome]=useState("no")
     const [alldetails,setAllDetails]=useState(false)
-    const [res,setRes]=useState("");
     const [singleperson,setSingleperson]=useState("")
+    console.log(singleperson)
     const [details,setDetails]=useState({
         firstName:"",
         lastName:"",
@@ -15,21 +15,13 @@ export const UserContextProvider=({children})=>{
         password:"",
         number:""
     }); 
-    const [num,setNum]=useState("")
     useEffect(()=>{
         if(alldetails==true){
             addData(details);
         }
     })
-    const handleNumber=(value)=>{
-       
-        console.log("value",value.num)
-        console.log(value.res);
-        setNum(value.num);
-        setRes(value.response)
-  }
     const handleDetails=(data)=>{
-        if(num=="" || data.firstName=="" || data.lastName=="" || data.email==""){
+        if(data.firstName=="" || data.lastName=="" || data.email==""){
             alert ("Fill all the data")
         }
         else{
@@ -39,7 +31,7 @@ export const UserContextProvider=({children})=>{
                 lastName:data.lastName,
                 email:data.email,
                 password:"1234",
-                number:num
+                number:singleperson
             })
             setAllDetails(true)
         }
@@ -53,15 +45,12 @@ export const UserContextProvider=({children})=>{
            "Content-Type":"application/json"
          },
          body:JSON.stringify(details)
-       }).then(()=>setGotoHome("yes"))
+       }).then(()=>{setGotoHome("yes");localStorage.setItem("users",JSON.stringify(details))})
       
-    }
-    const handleExisting=(response)=>{
-        setRes(response)
     }
     const singleUser=(user)=>{
         setSingleperson(user)
     }
     
-    return <UserContext.Provider value={{handleNumber,handleDetails,alldetails,gotoHome,res,handleExisting,singleUser,singleperson}}>{children}</UserContext.Provider>
+    return <UserContext.Provider value={{handleDetails,alldetails,gotoHome,singleUser,singleperson,details}}>{children}</UserContext.Provider>
 }

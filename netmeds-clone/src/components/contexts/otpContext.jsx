@@ -1,6 +1,6 @@
 import { RecaptchaVerifier,signInWithPhoneNumber } from "firebase/auth";
 import { createContext } from "react";
-import { auth } from "../../firebase";
+import { auth } from "../../firebase"
 export const OtpContext=createContext();
 export const OtpContextProvider=({children})=>{
     const setUpRecaptcha=(number)=>{

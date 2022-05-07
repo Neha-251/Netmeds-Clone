@@ -11,9 +11,9 @@ root.render(
     <UserContextProvider>
       
       <BrowserRouter>
-      <OtpContextProvider>
+      
       <App />
-      </OtpContextProvider>
+     
     </BrowserRouter>
     
     </UserContextProvider>

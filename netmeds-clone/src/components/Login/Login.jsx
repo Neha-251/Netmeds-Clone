@@ -11,26 +11,21 @@ import PhoneInput from 'react-phone-number-input'
 import { OtpContext } from "../contexts/otpContext";
 import { Nav_Menu } from "../Nav/Navbar";
 function Login() {
-  const {handleNumber}=useContext(UserContext)
   const {singleUser}=useContext(UserContext)
-  const {handleExisting}=useContext(UserContext)
-  const setUpRecaptcha=useContext(OtpContext)
   const [num,setNum]=useState("");
-  const [otp,setOtp]=useState("");
-  const [confirmObj,setConfirmObj]=useState("");
   const [valid,setValid]=useState("");
   const navigate=useNavigate()
+  console.log(num)
   const getOtp=async(e)=>{
+    
     e.preventDefault();
     if(num.length==0){
       setValid("empty")
     }
-    else if(num.length>0 && num.length<13){
+    else if(num.length>0 && num.length<10){
       setValid("invalid")
     }
-    else{
-      const response=await setUpRecaptcha(num)
-      console.log("response",response);
+    else{ 
       const data=await fetch("https://netmedback.herokuapp.com/users");
       const respondData=await data.json();
       const resData=respondData.users
@@ -38,56 +33,20 @@ function Login() {
         if(resData[i].number==num){
           console.log("yes")
           singleUser(resData[i])
-          handleExisting(response)
           navigate("/existing")
         }
         else{
-          handleNumber({num,response});
-          setValid("valid");
-          setConfirmObj(response);
-          
+          singleUser(num);
+          navigate("/signup");
         }
       }
-      // respondData.users.map((user)=>{
-      //   if(num==user.number){
-      //     console.log(user.number,num)
-      //     console.log("matched")
-      //     singleUser(user)
-      //     handleExisting(response)
-      //     navigate("/existing")
-      //   }
-      //   else{
-      //     handleNumber({num,response});
-      //     setValid("valid");
-      //     setConfirmObj(response)
-      //     console.log(num,user.number)
-      //   }
-      // })
-      
     }
     
   }
 if(valid=="valid"){
   return <Navigate to="/signup"/>
 }
-//   const {handleNumber}=useContext(UserContext)
-//   const setUpRecaptcha=useContext(OtpContext)
-//   const navigate=useNavigate()
-//   const [number,setNumber]=useState("");
-//   const {valid}=useContext(UserContext)
-//   useEffect(()=>{
-    
-//   },[])
-//  const getOtp=async(e)=>{
-//    e.preventDefault();
 
-//     // handleNumber(number);
-//     const response=await setUpRecaptcha(number)
-//  }
-//   // if(valid=="valid"){
-//   //   // navigate("/signup");
-//   //   return <Navigate to="/signup" replace={false}/>
-//}
   return (
     <div className="loginBox">
       <div className="loginImg">
@@ -103,17 +62,10 @@ if(valid=="valid"){
         </div>
 
        <div className="form">
-       {/* <form onSubmit={getOtp} action="" id="inputForm" >
-            <label id="label" htmlFor="">PHONE NUMBER</label>
-            <PhoneInput defaultCountry="IN" value={num} onChange={setNum} id='numInput' placeholder="Enter mobile no" />
-            <p className="validity">{valid=="empty"?"Please enter your Mobile Number!":valid=="invalid"?"Please enter valid Mobile Number!":""}</p>
-            <button id="otp" type="submit" ></button>
-        </form> */}
         <form onSubmit={getOtp} id='inputForm'>
         <label id="label" htmlFor="">PHONE NUMBER</label>
           {/* <div id="sign-in-button"></div> */}
-          <PhoneInput id='numInput' defaultCountry="IN" placeholder="Enter Your Mobile no" value={num} onChange={setNum}></PhoneInput>
-          <div id="recaptcha-container"/>
+          <input id='numInput' type="text"  placeholder="Enter Your Mobile no" onChange={(e)=>setNum(e.target.value)}></input>
           <p className="validity">{valid=="empty"?"Please enter your Mobile Number!":valid=="invalid"?"Please enter valid Mobile Number!":""}</p>
           <button type="submit" id="otp">USE OTP</button>
       </form>

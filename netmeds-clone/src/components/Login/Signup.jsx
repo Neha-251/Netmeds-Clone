@@ -1,46 +1,31 @@
 import React, { useContext, useState } from "react";
 import './Signup.css';
 import Image1 from '../../images/login.png';
-
-
 import { UserContext } from "../contexts/userContext";
 import { useNavigate } from "react-router-dom";
-
-
 function Signup() {
   const {gotoHome}=useContext(UserContext)
   const {handleDetails}=useContext(UserContext);
   const [otp,setOtp]=useState("");
-  const [confirmObj,setConfirmObj]=useState("")
   const navigate=useNavigate()
-  const {res}=useContext(UserContext)
-  console.log(res)
   const [details,setDetails]=useState({
     email:"",
     firstName:"",
     lastName:""
-  });
+  })
   const handleForm=(e)=>{
     setDetails({
       ...details,
       [e.target.id]:e.target.value
     })
   }
-  const verifyOtp=async(e)=>{
+  const verifyOtp=(e)=>{
+    console.log(details)
     e.preventDefault();
-    
-    if(otp=="" || otp==null){
-      return
-    }
-    try{
-      await res.confirm(otp);
       handleDetails(details)
-    }
-    catch(err){
-      console.log(err)
-    }
   }
   if(gotoHome=="yes"){
+    localStorage.setItem("users",JSON.stringify(details))
     navigate("/covid");
   }
   return (
