@@ -27,8 +27,8 @@ export const UserContextProvider=({children})=>{
     if(payment==true){
         const userID=JSON.parse(localStorage.getItem("users"));
         const cart=fetch("https://netmedback.herokuapp.com/carts");
-        const res=cart.json();
-        const cartdata=res.cart
+        const res=cart.cart
+        const cartdata=res.json();
         for(var i=0;i<cartdata;i++){
             if(userID._id==cartdata.user_id){
                 
