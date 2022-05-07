@@ -5,9 +5,17 @@ function ProductsDiabeties() {
     const [products,setProducts]=useState([]);
     
     const [order,setOrder]=useState("popularity");
+    const [userandproduct,setUserandproduct]=useState({
+        product_id:"",
+        user_id:""
+    })
+    const [cart,setCart]=useState(0);
     useEffect(()=>{
         getData()
-    },[])
+        if(cart!==0){
+            postData()
+        }
+    },[cart])
     const getData=async()=>{
         const data=await fetch("https://netmedback.herokuapp.com/products");
         const res=await data.json();
@@ -41,6 +49,27 @@ function ProductsDiabeties() {
         setProducts(copy);
         setOrder(x);
     }
+    const userID=JSON.parse(localStorage.getItem("users"));
+    console.log(userID._id)
+    const addToCart=(product_id)=>{
+        setUserandproduct({
+            product_id:product_id,
+            user_id:userID._id
+        })
+        setCart(cart+1);
+    }
+    
+    function postData(){
+        console.log("hi")
+        fetch("https://netmedback.herokuapp.com/carts",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(userandproduct)
+        })
+    }
+    console.log(userandproduct)
   return (
     <div className='product-right'>
         <div className='banner'>
@@ -108,7 +137,9 @@ function ProductsDiabeties() {
                         </div>
                         </div>
                         </Link>
-                        <button>ADD TO CART</button>
+                        <button onClick={()=>{
+                            addToCart(product._id);
+                        }}>ADD TO CART</button>
                     </div> 
                 ))}
             </div>

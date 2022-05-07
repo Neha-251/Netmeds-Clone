@@ -19,15 +19,21 @@ function Signup() {
       [e.target.id]:e.target.value
     })
   }
+  const fetchUserData=async()=>{
+    const userdata=await fetch("https://netmedback.herokuapp.com/users");
+    const res= await userdata.json();
+    localStorage.setItem("users",JSON.stringify(res.users[res.users.length-1]));
+    navigate("/covid");
+  }
   const verifyOtp=(e)=>{
     console.log(details)
     e.preventDefault();
       handleDetails(details)
   }
   if(gotoHome=="yes"){
-    localStorage.setItem("users",JSON.stringify(details))
-    navigate("/covid");
+    fetchUserData();
   }
+  
   return (
     <div className="Signup">
         <div className="signupImg">
