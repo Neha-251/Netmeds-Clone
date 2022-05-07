@@ -47,7 +47,8 @@ export const Footer=()=>{
                     </div>
                     <div className='F_divheight'>
                         <p>Get a free subscription to our health and 
-                            fitness tip and stay tuned to our latest offers</p>
+                            fitness tip and stay tuned to our latest offers</p><br />
+                            <hr/>
                             <div className='F_google'>
                             <div><img src="https://www.netmeds.com/assets/gloryweb/images/icons/play_store.png" alt="" /></div> 
                         <div><img src="https://www.netmeds.com/assets/gloryweb/images/icons/app_store.png" alt="" /></div>
