@@ -251,7 +251,9 @@ export const Payment = () => {
                                   </div>
                                   <div>Paytm</div>
                                 </div>
+                                <Link to="/paymentDiv">
                                 <div>Link</div>
+                                </Link>
                             </div>
                             
                             <div className="mob">
@@ -261,8 +263,9 @@ export const Payment = () => {
                                     </div>
                                     <div className="mobname">MobiKwik</div>
                                 </div>
+                                <Link to="/paymentDiv">
                                 <div className="moblink">Link</div>
-                                
+                                </Link>
                             </div>
                         </div>
                         
@@ -279,7 +282,9 @@ export const Payment = () => {
                                   </div>
                                   <div className="freename">Freecharge PayLater | Wallet</div>
                                 </div>
+                                <Link to="/paymentDiv">
                                 <div>Link</div>
+                                </Link>
                             </div>
                             
                             <div className="mob">
@@ -408,7 +413,7 @@ export const Payment = () => {
 
                                 </div>
                                 <div>
-                                    <Link to="/payment">
+                                    <Link to="/success">
                                     <button onClick={()=>{
                                         afterPayment(true);
                                     }}>PAY</button>

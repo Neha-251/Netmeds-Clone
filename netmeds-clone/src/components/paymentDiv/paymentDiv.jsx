@@ -1,11 +1,11 @@
 
 import { useState } from "react";
-import "./addressDiv.css";
+import "./paymentDiv.css";
 import "../../images/orderpage.png";
 import { useNavigate, Link } from "react-router-dom";
 
 
-export const AddressDiv = () => {
+export const PaymentDiv = () => {
 
     let navigate = useNavigate();
 

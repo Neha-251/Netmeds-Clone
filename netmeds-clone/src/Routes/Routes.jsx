@@ -15,6 +15,7 @@ import ExistingUser from "../components/Login/existingUser";
 import{Payment} from "../components/Payments/Payment"
 import UserDetails from "../components/UserDetails/UserDetails";
 import {Success} from "../components/Success/Success"
+import { PaymentDiv } from "../components/paymentDiv/paymentDiv";
 
 export const AllRoutes = () => {
     return (
@@ -36,6 +37,7 @@ export const AllRoutes = () => {
                 <Route path="/payment" element={<Payment></Payment>}></Route>
                 <Route path="/account/user-details" element={<UserDetails/>}></Route>
                 <Route path="/success" element={<Success></Success>}></Route>
+                <Route path="/paymentDiv" element={<PaymentDiv/>}></Route>
             </Routes>
 
         </>
