@@ -23,7 +23,7 @@ export const UserContextProvider=({children})=>{
         if(alldetails==true){
             addData(details);
         }
-    })
+    },[])
     if(payment==true){
         const userID=JSON.parse(localStorage.getItem("users"));
         const cart=fetch("https://netmedback.herokuapp.com/carts");
