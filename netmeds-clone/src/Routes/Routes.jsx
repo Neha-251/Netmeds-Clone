@@ -12,6 +12,7 @@ import { Footer } from "../components/Footer/Footer";
 import Signup from "../components/Login/Signup";
 import { Body } from "../components/Body Contents/body";
 import ExistingUser from "../components/Login/existingUser";
+import UserDetails from "../components/UserDetails/UserDetails";
 
 export const AllRoutes = () => {
     return (
@@ -30,6 +31,7 @@ export const AllRoutes = () => {
                 <Route path="/signup" element={<Signup/>}></Route>
                 <Route path="/" element={<Body/>}></Route>
                 <Route path="/existing" element={<ExistingUser/>}></Route>
+                <Route path="/account/user-details" element={<UserDetails/>}></Route>
             </Routes>
 
         </>

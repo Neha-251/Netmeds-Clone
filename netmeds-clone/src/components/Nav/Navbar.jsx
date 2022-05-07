@@ -21,7 +21,7 @@ export const Navbar = () => {
                 <Link to="/cart" >
                     <div className="cart">Cart</div>
                 </Link>
-                <Link to="/account/login" className="signin">{userData==null?"Sign In/Sign up":userData.firstName}</Link>
+                <Link to={userData==null?"/account/login":"/account/user-details"} className="signin">{userData==null?"Sign In/Sign up":userData.firstName}</Link>
             </div>
         </div>
     )
