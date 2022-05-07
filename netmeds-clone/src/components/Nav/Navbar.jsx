@@ -6,6 +6,9 @@ import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 
 export const Navbar = () => {
+    const userData=JSON.parse(localStorage.getItem("users"));
+    console.log(userData);
+
     return (
         <div className="navbar">
             <div className="navbox">
@@ -18,7 +21,7 @@ export const Navbar = () => {
                 <Link to="/cart" >
                     <div className="cart">Cart</div>
                 </Link>
-                <Link to="/account/login" className="signin">Sign In/Sign up</Link>
+                <Link to="/account/login" className="signin">{userData==null?"Sign In/Sign up":userData.firstName}</Link>
             </div>
         </div>
     )
