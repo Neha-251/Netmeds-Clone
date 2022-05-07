@@ -112,6 +112,10 @@ export const Cart = () => {
             let res = await fetch("https://netmedback.herokuapp.com/carts");
 
             let data = await res.json();
+            console.log('data_get_cart', data)
+
+
+            
 
 
             let userId = "6275e8307fe4bb73452dcfc6";
