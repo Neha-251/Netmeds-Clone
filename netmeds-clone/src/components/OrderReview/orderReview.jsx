@@ -38,21 +38,14 @@ export const OrderReview = () => {
 
         if (codeStatus === false) {
             setCodeStatus(true);
-            // if (codeStatus === true) {
-            //     console.log(codeStatus);
+           
         } else {
             setCodeStatus(false);
         }
-        // } else {
-        //     setCodeStatus(true);
-        //     console.log(codeStatus);
-        // }
-        // }
+       
     }
     const applyCode1 = () => {
-        // if (applyCodeS1 === false) {
-        //     setApplyCodeS1(true);
-        // } else {
+        
         if (applyCodeS1 === true) {
 
             setApplyCodeS1(false);
@@ -62,12 +55,10 @@ export const OrderReview = () => {
         } else {
             setApplyCodeS1(true);
         }
-        // }
+        
     }
     const applyCode2 = () => {
-        // if (applyCodeS2 === false) {
-        //     setApplyCodeS2(true);
-        // } else {
+        
         if (applyCodeS2 === true) {
             setApplyCodeS2(false);
             setDiscount1(Math.round((mrpTotal * 5) / 100))
@@ -75,12 +66,10 @@ export const OrderReview = () => {
         } else {
             setApplyCodeS2(true);
         }
-        // }
+        
     }
     const applyCode3 = () => {
-        // if (applyCodeS3 === false) {
-        //     setApplyCodeS3(true);
-        // } else {
+       
         if (applyCodeS3 === true) {
             setApplyCodeS3(false);
             setDiscount1(Math.round((mrpTotal * 15) / 100))
@@ -88,7 +77,7 @@ export const OrderReview = () => {
         } else {
             setApplyCodeS3(true);
         }
-        // }
+        
     }
 
     const applyCode4 = () => {
@@ -107,9 +96,7 @@ export const OrderReview = () => {
     const getCartData = async () => {
 
         try {
-            // axios.get("https://netmedback.herokuapp.com/carts").then(response => {
-            //     setCartData(response.data.cart);
-            // }).then((response)=> {calculateTotal(response.data.cart)})
+          
 
             let res = await fetch("https://netmedback.herokuapp.com/carts");
 
@@ -119,9 +106,7 @@ export const OrderReview = () => {
             setCartData(data.cart);
             calculateTotal(data.cart);
 
-            // setTimeout(() => {
-            //     handleTotal();
-            // }, 3000)
+           
 
             console.log("data", data)
 
@@ -135,34 +120,29 @@ export const OrderReview = () => {
 
     console.log("cartData", cartData);
 
-    //console.log("cartData", cartData);
+ 
+
+    // const handleRemove = (id) => {
+    //     console.log(id);
+
+    //     try {
+
+            
+    //         setMrpTotal(0);
+    //         setDeleteStatus(false);
+
+    //         axios.delete(`https://netmedback.herokuapp.com/carts/${id}`).then(() =>
+    //             setReRender()
+    //         );
 
 
+    //     }
 
+    //     catch (error) {
+    //         console.log('error', error)
 
-
-
-    const handleRemove = (id) => {
-        console.log(id);
-
-        try {
-
-            // setCartData(cartData.filter((e) => e.id !== id));
-            setMrpTotal(0);
-            setDeleteStatus(false);
-
-            axios.delete(`https://netmedback.herokuapp.com/carts/${id}`).then(() =>
-                setReRender()
-            );
-
-
-        }
-
-        catch (error) {
-            console.log('error', error)
-
-        }
-    }
+    //     }
+    // }
 
 
     const calculateTotal = (cartData) => {
