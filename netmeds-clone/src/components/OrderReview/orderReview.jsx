@@ -144,14 +144,25 @@ export const OrderReview = () => {
 
             let data_add = await res_add.json();
             console.log('data_add', data_add.checkout)
+            console.log('data_add[1]', data_add.checkout[1].phone)
+            console.log('user_ph', user_ph)
 
          
-            for(let i = 0; i < data_add.checkout.length; i++){
-                if(data_add.checkout[i].phone === user_ph){
-                    setReg_address(data_add.checkout[i]);
-                }
-            }
+            // for(let i = 0; i < data_add.checkout.length; i++){
+            //     if(data_add.checkout[i].phone === user_ph){
+            //         setReg_address(data_add.checkout[i]);
+            //         console.log('data_add.checkout[i]', data_add.checkout[i])
+            //     }
+            // }
 
+
+            data_add.checkout.forEach((el) => {
+                console.log('el', el.phone)
+
+                if(el.phone === user_ph){
+                            setReg_address(el);
+                }
+            })
 
             // setReg_address(data_add.checkout[0]);
 

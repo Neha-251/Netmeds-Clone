@@ -25,20 +25,24 @@ export const UserContextProvider=({children})=>{
         }
     })
     if(payment==true){
+        cartFetch()
+        }
+    async function cartFetch(){
         const userID=JSON.parse(localStorage.getItem("users"));
-        const cart=fetch("https://netmedback.herokuapp.com/carts");
-        const res=cart.cart
-        const cartdata=res.json();
-        for(var i=0;i<cartdata;i++){
-            if(userID._id==cartdata.user_id){
-                
-                const remove=removeCart(cartdata[i]._id);
+        console.log(userID)
+        const cart=await fetch("https://netmedback.herokuapp.com/carts");
+        const res= await cart.json();
+        console.log("res",res);
+        const cartArr=res.cart;
+        for(var i=0;i<cartArr.length;i++){
+            if(userID._id===cartArr[i].user_id){
+                console.log("yes")
+                const remove=removeCart(cartArr[i]._id);
                 setPayment(remove);
-            }
-        }
-            
-        }
-    
+                
+            }   
+        } 
+    }
     const handleDetails=(data)=>{
         if(data.firstName=="" || data.lastName=="" || data.email==""){
             alert ("Fill all the data")
@@ -64,7 +68,7 @@ export const UserContextProvider=({children})=>{
            "Content-Type":"application/json"
          },
          body:JSON.stringify(details)
-       }).then(()=>{setGotoHome("yes");localStorage.setItem("users",JSON.stringify(details))})
+       }).then(()=>{setGotoHome("yes");setAllDetails(false);localStorage.setItem("users",JSON.stringify(details))})
       
     }
     const afterPayment=(x)=>{
