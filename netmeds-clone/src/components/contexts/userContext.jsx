@@ -1,6 +1,7 @@
 
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const UserContext=createContext();
 export const UserContextProvider=({children})=>{
@@ -8,6 +9,8 @@ export const UserContextProvider=({children})=>{
     const [alldetails,setAllDetails]=useState(false)
     const [singleperson,setSingleperson]=useState("")
     const [payment,setPayment]=useState(false)
+
+    
     console.log(singleperson)
     const [details,setDetails]=useState({
         firstName:"",
@@ -16,23 +19,25 @@ export const UserContextProvider=({children})=>{
         password:"",
         number:""
     }); 
-    const [userandproduct,setUserandproduct]=useState({
-        product_id:"",
-        user_id:""
-    });
     useEffect(()=>{
         if(alldetails==true){
             addData(details);
         }
-        if(payment){
-            setUserandproduct({
-                product_id:null,
-                user_id:userID._id
-            })
-            removeCart()
+    })
+    if(payment==true){
+        const userID=JSON.parse(localStorage.getItem("users"));
+        const cart=fetch("https://netmedback.herokuapp.com/carts");
+        const res=cart.json();
+        const cartdata=res.cart
+        for(var i=0;i<cartdata;i++){
+            if(userID._id==cartdata.user_id){
+                
+                const remove=removeCart(cartdata[i]._id);
+                setPayment(remove);
+            }
         }
-    },[payment==true])
-    const userID=JSON.parse(localStorage.getItem("users"));
+            
+        }
     
     const handleDetails=(data)=>{
         if(data.firstName=="" || data.lastName=="" || data.email==""){
@@ -68,15 +73,9 @@ export const UserContextProvider=({children})=>{
     const singleUser=(user)=>{
         setSingleperson(user)
     }
-    function removeCart(){
-        fetch("https://netmedback.herokuapp.com/carts",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify(userandproduct)
-        })
-        console.log(userandproduct)
+    function removeCart(id){
+        axios.delete(`https://netmedback.herokuapp.com/carts/${id}`);
+        return false;
     }
     return <UserContext.Provider value={{handleDetails,alldetails,gotoHome,singleUser,singleperson,details,payment,afterPayment}}>{children}</UserContext.Provider>
 }
