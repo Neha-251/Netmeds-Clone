@@ -27,3 +27,13 @@
     color: rgb(50,174,177);
     padding: 20px;
 }
+
+.maindiv > div > a > button{
+    background-color: rgb(50,174,177);
+    padding: 10px 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+}

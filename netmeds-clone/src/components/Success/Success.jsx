@@ -1,4 +1,5 @@
 import "./Success.css";
+import { Link } from "react-router-dom";
 
 export const Success= ()=>{
     return (
@@ -13,7 +14,8 @@ export const Success= ()=>{
             </div>
             <div>
                 <p>Click Below To Go To Home Page</p>
-                <button>Home</button>
+                <Link to="/">
+                <button>Home</button></Link>
             </div>
 
         </div>
