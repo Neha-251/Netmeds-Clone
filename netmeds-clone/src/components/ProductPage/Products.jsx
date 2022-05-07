@@ -77,6 +77,7 @@ function Products() {
             },
             body:JSON.stringify(userandproduct)
         })
+        console.log(userandproduct)
     }
     
   return (

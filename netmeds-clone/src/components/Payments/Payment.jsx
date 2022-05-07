@@ -3,9 +3,10 @@ import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 import { Button } from "@mui/material";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { FaLuggageCart, FaRupeeSign } from "react-icons/fa";
-import { useState, useEffect, useReducer } from "react";
+import { useState, useEffect, useReducer, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { UserContext } from "../contexts/userContext";
 
 
 
@@ -33,7 +34,8 @@ export const Payment = () => {
 
     const [reRender, setReRender] = useReducer(x => x + 1, 0)
 
-
+    const {payment}=useContext(UserContext);
+    const {afterPayment}=useContext(UserContext);
     const handleCodeApply = () => {
 
         if (codeStatus === false) {
@@ -407,7 +409,9 @@ export const Payment = () => {
                                 </div>
                                 <div>
                                     <Link to="/payment">
-                                    <button>PAY</button>
+                                    <button onClick={()=>{
+                                        afterPayment(true);
+                                    }}>PAY</button>
                                     </Link>
                                     
                                 </div>
