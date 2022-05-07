@@ -114,14 +114,25 @@ export const Cart = () => {
             let data = await res.json();
 
 
-            setCartData(data.cart);
-            calculateTotal(data.cart);
+            let userId = "6275e8307fe4bb73452dcfc6";
 
-            // setTimeout(() => {
-            //     handleTotal();
-            // }, 3000)
+            let user_based_data = [];
+            
+            for(let i = 0; i < data.cart.length; i++){
+                if(data.cart[i].user_id === userId){
+                    user_based_data.push(data.cart[i]);
+                }
+            }
 
             console.log("data", data)
+            console.log("user_based_data", user_based_data);
+
+            setCartData(user_based_data);
+            calculateTotal(user_based_data);
+
+            
+
+            
 
         }
         catch (err) {
@@ -131,9 +142,8 @@ export const Cart = () => {
 
     }
 
-    console.log("cartData", cartData);
 
-    //console.log("cartData", cartData);
+    console.log("cartData", cartData);
 
 
 

@@ -6,13 +6,15 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { FaLuggageCart, FaRupeeSign } from "react-icons/fa";
 import { useState, useEffect, useReducer } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 
 
 export const OrderReview = () => {
 
     const [userlogin, setUserlogin] = useState(false);
+    const navigate = useNavigate();
 
     const [codeStatus, setCodeStatus] = useState(true);
     const [applyCodeS1, setApplyCodeS1] = useState(true);
@@ -31,28 +33,23 @@ export const OrderReview = () => {
 
     const [deleteStatus, setDeleteStatus] = useState(true);
 
-    const [reRender, setReRender] = useReducer(x => x + 1, 0)
+    const [reRender, setReRender] = useReducer(x => x + 1, 0);
+
+    const [reg_address, setReg_address] = useState([]);
 
 
     const handleCodeApply = () => {
 
         if (codeStatus === false) {
             setCodeStatus(true);
-            // if (codeStatus === true) {
-            //     console.log(codeStatus);
+           
         } else {
             setCodeStatus(false);
         }
-        // } else {
-        //     setCodeStatus(true);
-        //     console.log(codeStatus);
-        // }
-        // }
+       
     }
     const applyCode1 = () => {
-        // if (applyCodeS1 === false) {
-        //     setApplyCodeS1(true);
-        // } else {
+        
         if (applyCodeS1 === true) {
 
             setApplyCodeS1(false);
@@ -62,12 +59,10 @@ export const OrderReview = () => {
         } else {
             setApplyCodeS1(true);
         }
-        // }
+        
     }
     const applyCode2 = () => {
-        // if (applyCodeS2 === false) {
-        //     setApplyCodeS2(true);
-        // } else {
+        
         if (applyCodeS2 === true) {
             setApplyCodeS2(false);
             setDiscount1(Math.round((mrpTotal * 5) / 100))
@@ -75,12 +70,10 @@ export const OrderReview = () => {
         } else {
             setApplyCodeS2(true);
         }
-        // }
+        
     }
     const applyCode3 = () => {
-        // if (applyCodeS3 === false) {
-        //     setApplyCodeS3(true);
-        // } else {
+       
         if (applyCodeS3 === true) {
             setApplyCodeS3(false);
             setDiscount1(Math.round((mrpTotal * 15) / 100))
@@ -88,7 +81,7 @@ export const OrderReview = () => {
         } else {
             setApplyCodeS3(true);
         }
-        // }
+        
     }
 
     const applyCode4 = () => {
@@ -107,23 +100,63 @@ export const OrderReview = () => {
     const getCartData = async () => {
 
         try {
-            // axios.get("https://netmedback.herokuapp.com/carts").then(response => {
-            //     setCartData(response.data.cart);
-            // }).then((response)=> {calculateTotal(response.data.cart)})
+          
 
             let res = await fetch("https://netmedback.herokuapp.com/carts");
 
             let data = await res.json();
 
 
-            setCartData(data.cart);
-            calculateTotal(data.cart);
+            let userId = "6275e8307fe4bb73452dcfc6";
 
-            // setTimeout(() => {
-            //     handleTotal();
-            // }, 3000)
+            let user_based_data = [];
+            
+            for(let i = 0; i < data.cart.length; i++){
+                if(data.cart[i].user_id === userId){
+                    user_based_data.push(data.cart[i]);
+                }
+            }
 
             console.log("data", data)
+            console.log("user_based_data", user_based_data);
+
+
+            setCartData(user_based_data);
+            calculateTotal(user_based_data);
+
+
+            let res_user = await fetch("https://netmedback.herokuapp.com/users");
+            let data_user = await res_user.json();
+            console.log('data_user', data_user);
+
+            let user_ph;
+            for(let i = 0; i < data_user.users.length; i++) {
+                if(data_user.users[i]._id === userId){
+                    user_ph = data_user.users[i].number;
+                }
+            }
+
+
+            let res_add = await fetch("https://netmedback.herokuapp.com/checkout");
+
+            let data_add = await res_add.json();
+            console.log('data_add', data_add.checkout)
+
+         
+            for(let i = 0; i < data_add.checkout.length; i++){
+                if(data_add.checkout[i].phone === user_ph){
+                    setReg_address(data_add.checkout[i]);
+                }
+            }
+
+
+            // setReg_address(data_add.checkout[0]);
+
+
+            if(reg_address.length === 0){
+                navigate("/addressdiv")
+            }
+
 
         }
         catch (err) {
@@ -134,35 +167,33 @@ export const OrderReview = () => {
     }
 
     console.log("cartData", cartData);
-
-    //console.log("cartData", cartData);
-
-
+    
+    console.log('reg_address', reg_address)
 
 
+ 
+
+    // const handleRemove = (id) => {
+    //     console.log(id);
+
+    //     try {
+
+            
+    //         setMrpTotal(0);
+    //         setDeleteStatus(false);
+
+    //         axios.delete(`https://netmedback.herokuapp.com/carts/${id}`).then(() =>
+    //             setReRender()
+    //         );
 
 
-    const handleRemove = (id) => {
-        console.log(id);
+    //     }
 
-        try {
+    //     catch (error) {
+    //         console.log('error', error)
 
-            // setCartData(cartData.filter((e) => e.id !== id));
-            setMrpTotal(0);
-            setDeleteStatus(false);
-
-            axios.delete(`https://netmedback.herokuapp.com/carts/${id}`).then(() =>
-                setReRender()
-            );
-
-
-        }
-
-        catch (error) {
-            console.log('error', error)
-
-        }
-    }
+    //     }
+    // }
 
 
     const calculateTotal = (cartData) => {
@@ -277,6 +308,32 @@ export const OrderReview = () => {
                         }
 
                     </div>
+
+                    <div className="showAddress">
+                        <p>DELIVERY ADDRESS</p>
+                        
+                        {
+                        
+                            
+                                <div>
+                                    <p>{ reg_address.firstName } {reg_address.lastName}</p>
+                                    <p>{ reg_address.address },</p>
+                                    <p>{ reg_address.landmark }</p>
+                                    <p>{ reg_address.city } - {reg_address.pincode} { reg_address.state }.</p>
+                                    <p>+91 - { reg_address.phone  }</p>
+                                    
+                                </div>
+                            
+                    
+
+                        }
+
+                    </div>
+
+
+
+
+
                     <Link to="/addressdiv">
                         <button className="goto_address_btn">Add Address</button>
                     </Link>
