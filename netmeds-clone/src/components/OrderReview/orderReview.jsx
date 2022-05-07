@@ -174,17 +174,17 @@ export const OrderReview = () => {
 
     console.log("reg_address.length", reg_address);
 
-    useEffect(()=> {
-        setTimeout(()=> {
+    // useEffect(()=> {
+    //     setTimeout(()=> {
 
-            console.log("reg_address.length", reg_address.length);
-            if(reg_address.length === 0){
-                navigate("/addressdiv")
-            } else {
-                navigate("/orderReview");
-            }
-        }, 2000)
-    })
+    //         console.log("reg_address.length", reg_address.length);
+    //         if(reg_address.length === -1){
+    //             navigate("/addressdiv")
+    //         } else {
+    //             navigate("/orderReview");
+    //         }
+    //     }, 2000)
+    // })
 
  
 

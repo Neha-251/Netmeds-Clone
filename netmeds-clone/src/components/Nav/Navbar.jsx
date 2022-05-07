@@ -12,7 +12,7 @@ export const Navbar = () => {
     const [reload, setreload] = useState(false);
     const [navreRender, setnavReRender] = useReducer(x => x + 1, 0)
     const [cartItem, setcartItem] = useState(0);
-
+    const [limit, setLimit] = useState(0);
 
     const userData=JSON.parse(localStorage.getItem("users"));
     console.log(userData);
@@ -61,7 +61,11 @@ export const Navbar = () => {
     }
     
     useEffect(() => {
-        navgetCartData();
+        if(limit === 0){
+            navgetCartData();
+            setLimit(prev => prev + 1);
+        }
+        
     
     }, [navreRender])
     
