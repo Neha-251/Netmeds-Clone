@@ -107,7 +107,10 @@ export const OrderReview = () => {
             let data = await res.json();
 
 
-            let userId = "62760e357fe4bb73452dd215";
+            let userdata = JSON.parse(localStorage.getItem("users"))
+
+            let userId = userdata._id;
+
 
             let user_based_data = [];
             
@@ -153,15 +156,7 @@ export const OrderReview = () => {
             // setReg_address(data_add.checkout[0]);
 
 
-            setTimeout(()=> {
-
-                console.log("reg_address.length", reg_address.length);
-                if(reg_address.length === -1){
-                    navigate("/addressdiv")
-                } else {
-                    navigate("/orderReview");
-                }
-            }, 2000)
+          
             
 
 
@@ -177,6 +172,19 @@ export const OrderReview = () => {
     
     console.log('reg_address', reg_address)
 
+    console.log("reg_address.length", reg_address);
+
+    useEffect(()=> {
+        setTimeout(()=> {
+
+            console.log("reg_address.length", reg_address.length);
+            if(reg_address.length === 0){
+                navigate("/addressdiv")
+            } else {
+                navigate("/orderReview");
+            }
+        }, 2000)
+    })
 
  
 
