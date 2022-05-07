@@ -138,7 +138,6 @@ export const Cart = () => {
             setCartData(user_based_data);
             calculateTotal(user_based_data);
 
-            
 
             
 

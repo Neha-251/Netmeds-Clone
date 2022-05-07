@@ -341,4 +341,8 @@
 
 .pro_div1 > div:nth-child(2){
     margin-left: 20px;
+
+}
+.img_pro{
+    height: 50px;
 }
