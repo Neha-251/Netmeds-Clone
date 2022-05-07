@@ -1,0 +1,503 @@
+.cartMain {
+    width: 80%;
+    margin: 20px auto;
+    font-weight: 700;
+    background-color: whitesmoke;
+}
+
+.cartMainContainer {
+    display: flex;
+    color: rgb(83, 82, 82);
+
+    letter-spacing: 1px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 50px auto;
+    /* border: 1px solid blue; */
+}
+.CardDiv{
+    text-align: center;
+    padding: 10px;
+    margin-top: 8px;
+    color: rgb(120,192,197);
+    
+}
+
+.cartContainer_1 {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    width: 70%;
+    /* padding: 20px; */
+    background-color: whitesmoke;
+}
+.vouchers{
+    display: flex;
+    /* border: 1px solid green; */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.vcheck{
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+}
+.paydiv{
+    /* display: flex; */
+    
+    
+    padding: 12px;
+}
+.mob{
+    display: flex;
+    padding-top: 15px;
+    justify-content: space-between;
+}
+.paytm{
+    display: flex;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    justify-content: space-between;
+    border-bottom: 3px solid whitesmoke;
+}
+
+.namelogopay,.namelogomob{
+    display: flex;
+    padding: 0%;
+}
+.namelogofree,.namelogoama{
+    display: flex;
+    padding: 0%;
+}
+.paytmicon{
+    padding: 0%;
+    margin: 0%;
+    margin-left: 12px;
+}
+.payimg>img{
+    width: 50px;
+    margin-right: 15px;
+}
+.freeimg>img{
+    width: 50px;
+    margin-right: 15px;
+}
+.amaimg>img{
+    width: 50px;
+    margin-right: 15px;
+}
+.mobimg>img{
+    width: 40px;
+    margin-right: 15px;
+}
+.freename{
+    margin-top: 13px;
+}
+.mobname,.moblink{
+    margin-top: 6px;
+}
+
+
+.cartContainer_2 {
+    /* border: 1px solid green; */
+    width: 25%;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.promocode_div {
+    display: flex;
+    gap: 10px;
+}
+.preferred_payment{
+    padding: 10px;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.radioBtn_promoCode {
+    height: 17px;
+    width: 17px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.radioBtn_promoCode_null {
+    height: 16px;
+    width: 14px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3px;
+    padding-top: 0;
+    padding-left: 3px;
+    background-color: rgb(36, 174, 177);
+    color: white;
+    font-size: 13px;
+}
+
+.promoCode_h3 {
+    margin-top: 3px;
+    font-size: 15px;
+    color: grey;
+}
+
+.downArrow {
+    margin-left: 30%;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.code_div {
+    border: 2px dotted grey;
+    margin: 5px auto;
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+
+
+}
+
+.code_div>div:nth-child(2) {
+    width: 75%;
+    margin: 0;
+}
+
+.code_heading {
+    margin-top: 0;
+    font-size: 15px;
+
+}
+
+.code_details {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.code_inp {
+    width: 200px;
+    outline: none;
+    border: none;
+    height: 25px;
+    font-size: 15px;
+}
+
+.code_inp::placeholder {
+    /* letter-spacing: 0.2px; */
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(171, 171, 171);
+}
+
+.inp_div button {
+    color: red;
+    margin-left: 70%;
+    margin-top: -5px;
+}
+
+.inp_div p {
+    font-size: 10px;
+    color: rgb(36, 174, 177);
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+
+.applyPromo_none {
+    display: none;
+}
+
+.applyPromo_block {
+    display: block;
+}
+
+.apply_promoCode_radio {
+    height: 17px;
+    width: 17px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.apply_promoCode_radio_null {
+    height: 16px;
+    width: 14px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+    margin: 2px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3px;
+    padding-top: 0;
+    padding-left: 3px;
+    background-color: rgb(36, 174, 177);
+    color: white;
+    font-size: 13px;
+}
+
+
+.paymentDetails_Maindiv {
+    padding: 15px;
+}
+
+
+.paymentDetails_Maindiv>div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+.paymentDetails_Maindiv>div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+.paymentDetails_Maindiv>div:nth-child(4) {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 15px auto;
+}
+
+
+.paymentDetails_Maindiv>div {
+    display: flex;
+
+}
+
+
+.savings_div {
+    padding: 10px;
+    background-color: rgb(224, 251, 224);
+    font-size: 12px;
+    color: mediumseagreen;
+}
+
+
+.totalAmount_mainDiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+.totalAmount_mainDiv>div>div:nth-child(1) {
+    font-size: 12px;
+    justify-content: center;
+    padding: 0 20px;
+    margin: auto;
+}
+
+.totalAmount_mainDiv>div>div:nth-child(2) {
+    justify-content: space-evenly;
+    font-size: 15px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+
+
+.totalAmount_mainDiv button {
+    background-color: lightseagreen;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px 35px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.img_pro {
+    height: 50px;
+}
+
+.product_subdiv {
+    display: flex;
+    border-bottom: 0.2px solid rgb(234, 234, 234);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.pro_div1 {
+    display: flex;
+    width: 75%;
+}
+
+.pro_div2_or {
+    width: 25%;
+    
+    justify-content: end;
+}
+
+.pro_div2_or > div:nth-child(1) {
+    /* margin-left: 30px; */
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: end;
+    height: auto;
+    font-size: 20px;
+    width:200px;
+}
+
+.pro_div2_or > div:nth-child(2) {
+    text-align: end;
+    display: flex;
+    margin-left: 150px;
+    font-size: 13px;
+    width:50px;
+}
+
+.pro_div2>div:nth-child(2)>button {
+    border: none;
+    padding: 8px 15px;
+    /* margin: 0px 15px; */
+    text-transform: uppercase;
+    color: grey;
+    background-color: rgb(230, 230, 230);
+    font-size: 13px;
+
+
+}
+
+
+.elName {
+    font-size: 15px;
+    margin: 5px auto;
+}
+
+.elMkt {
+    font-size: 12px;
+    color: grey;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+
+.priceDiv {
+    display: flex;
+    margin: 30px auto;
+}
+
+.elPrice {
+    color: deeppink;
+    font-size: 15px;
+    margin-top: 0;
+
+}
+
+.elstprice {
+    color: grey;
+    font-size: 12px;
+    text-decoration: line-through;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.delivery_p {
+    margin-top: -10px;
+}
+
+
+.productsShow_div {
+    margin-left: px;
+}
+
+.pro_div1>div:nth-child(2) {
+    margin-left: 20px;
+}
+
+.des_p{
+    font-size: 8px;
+    font-style: italic;
+    color: grey;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.orderNav{
+    display: flex;
+    background-color: rgb(21,27,57);
+    border-radius: 20px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 10px 50px;
+    color: white;
+}
+
+
+.orderNav > div{
+    display: flex;
+}
+
+.orderNav > div > div{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+
+.orderNav > div > div> p{
+   margin: 3px 0;
+   font-size: 10px;
+   font-weight: 400;
+}
+
+.nav_line_white{
+    width: 50px;
+    height: 2px;
+    margin: 15px 5px;
+    background-color: white;
+}
+
+
+.nav_line_grey{
+    width: 50px;
+    height: 2px;
+    margin: 15px 5px;
+    background-color: grey;
+}
+
+.navIcon_bac{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    
+    border-radius: 50%;
+    width: 18px;
+    height:18px;
+    padding: 5px;
+    margin: auto;
+    background-color: rgb(45,50,77);
+}
+
+
+.goto_address_btn{
+    background-color: lightseagreen;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px 35px;
+    border-radius: 5px;
+    border: none;
+}

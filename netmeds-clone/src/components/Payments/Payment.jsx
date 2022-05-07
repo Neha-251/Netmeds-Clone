@@ -1,5 +1,4 @@
-
-import "./orderReview.css";
+import "./Payment.css";
 import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 import { Button } from "@mui/material";
 import { BsFillBagCheckFill } from "react-icons/bs";
@@ -10,7 +9,8 @@ import { Link } from "react-router-dom";
 
 
 
-export const OrderReview = () => {
+
+export const Payment = () => {
 
     const [userlogin, setUserlogin] = useState(false);
 
@@ -224,62 +224,138 @@ export const OrderReview = () => {
 
                 {/* export const Cart = () => { */}
                 <div className="cartContainer_1">
-                    <h5>PRODUCTS</h5>
+                    
+                    <div className="vouchers">
+                        <input type="checkbox" className="vcheck"></input>
+                        <div className="voucherName">VOUCHERS</div>
+                    </div>
 
-                    <div className="productsShow_div">
-
-
-                        {
-                            cartData.map((el) => {
-                                // console.log("el_name", el);
-
-
-
-                                return (
-                                    <div className="product_subdiv">
-                                        <div className="pro_div1">
-                                            <div>
-
-
-                                                <img className="img_pro" src={el.product_id.img} alt="" />
-
-                                            </div>
-                                            <div>
-                                                <p className="elName">{el.product_id.name}</p>
-                                                {/* <p className="elNos">{el.nos}</p> */}
-
-                                                <p className="elMkt">{el.product_id.mkt}</p>
-
-
-                                                <div className="address_div"></div>
-
-                                                <div className="delivery_p">Delivery between May 5 5PM-May 6 10PM</div>
-                                            </div>
-                                        </div>
-                                        <div className="pro_div2_or">
-
-                                            <div>
-                                                <p className="elPrice">Rs {el.product_id.price}</p>
-                                                <p className="elstprice">Rs {el.product_id.stprice}</p>
-                                            </div>
-                                            <div>
-
-                                                <div>QTY:</div>
-                                                <div>{el.nos}</div>
-                                            </div>
-
-                                        </div>
-
+                    <div className="preferred_payment">
+                        
+                        <div className="paydiv">
+                        <div>PREFERRED PAYMENT</div>
+                            <div className="paytm">
+                                <div className="namelogopay">
+                                  <div className="payimg">
+                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Paytm_Logo_%28standalone%29.svg/1200px-Paytm_Logo_%28standalone%29.svg.png" alt="notfpund"></img>
+                                  </div>
+                                  <div>Paytm</div>
+                                </div>
+                                <div>Link</div>
+                            </div>
+                            
+                            <div className="mob">
+                                <div className="namelogomob">
+                                    <div className="mobimg">
+                                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/mobikwik-logo.png"></img>
                                     </div>
-
-                                )
-                            })
-                        }
+                                    <div className="mobname">MobiKwik</div>
+                                </div>
+                                <div className="moblink">Link</div>
+                                
+                            </div>
+                        </div>
+                        
 
                     </div>
-                    <Link to="/addressdiv">
-                        <button className="goto_address_btn">Add Address</button>
-                    </Link>
+                    <div className="preferred_payment">
+                        
+                        <div className="paydiv">
+                        <div className="sectionname">WALLET</div>
+                            <div className="paytm">
+                                <div className="namelogofree">
+                                  <div className="freeimg">
+                                     <img src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/freecharge-logo.png" width="40" alt="notfpund"></img>
+                                  </div>
+                                  <div className="freename">Freecharge PayLater | Wallet</div>
+                                </div>
+                                <div>Link</div>
+                            </div>
+                            
+                            <div className="mob">
+                                <div className="namelogoama">
+                                    <div className="amaimg">
+                                        <img src="https://static.amazon.jobs/teams/378/thumbnails/AmazonPayLogo-543.jpg?1508227956"></img>
+                                    </div>
+                                    <div className="mobname">Amazon Pay</div>
+                                </div>
+                                <div className="moblink">
+                                    <input type="radio"></input>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <div className="preferred_payment">
+                        
+                        <div className="paydiv">
+                        <div className="sectionname">OTHER PAYMENTS</div>
+                        
+                            <div className="mob">
+                                <div className="namelogoama">
+                                    <div className="amaimg">
+                                        <img src="https://www.pngitem.com/pimgs/m/3-38170_phonepe-logo-png-phone-pe-transparent-png.png"></img>
+                                    </div>
+                                    <div className="mobname">Phone Pe</div>
+                                </div>
+                                <div className="moblink">
+                                    <input type="radio"></input>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div className="preferred_payment">
+                        
+                        <div className="paydiv">
+                        <div className="sectionname">UPI</div>
+                        
+                            <div className="mob">
+                                <div className="namelogoama">
+                                    <div className="amaimg">
+                                        <img src="https://seeklogo.com/images/G/google-pay-logo-BFDEA14F81-seeklogo.com.png"></img>
+                                    </div>
+                                    <div className="mobname">Google Pay</div>
+                                </div>
+                                <div className="moblink">
+                                    <input type="radio"></input>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div className="preferred_payment">
+                        
+                        <div className="paydiv">
+                        <div className="sectionname">CREDIT & DEBIT CARDS</div>
+                        <br></br>
+                        <hr></hr>
+                        <div className="CardDiv">ADD NEW CARD</div>
+                        
+                            
+                        </div>
+                    </div>
+                    <div className="preferred_payment">
+                        
+                        <div className="paydiv">
+                        <div className="sectionname">UPI</div>
+                        
+                            <div className="mob">
+                                <div className="namelogoama">
+                                    <div className="amaimg">
+                                        <img src="https://www.kindpng.com/picc/m/394-3943480_cash-on-delivery-icon-hd-png-download.png"></img>
+                                    </div>
+                                    <div className="mobname">Cash On Delivery</div>
+                                </div>
+                                <div className="moblink">
+                                    <input type="radio"></input>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <div className="cartContainer_2">
@@ -348,4 +424,3 @@ export const OrderReview = () => {
 
 
 }
-
