@@ -153,9 +153,16 @@ export const OrderReview = () => {
             // setReg_address(data_add.checkout[0]);
 
 
-            if(reg_address.length === 0){
-                navigate("/addressdiv")
-            }
+            setTimeout(()=> {
+
+                console.log("reg_address.length", reg_address.length);
+                if(reg_address.length === -1){
+                    navigate("/addressdiv")
+                } else {
+                    navigate("/orderReview");
+                }
+            }, 2000)
+            
 
 
         }
