@@ -5,7 +5,7 @@ import {OrderReview} from "../components/OrderReview/orderReview";
 import { AddressDiv } from "../components/addressDiv/addressDiv";
 import { Navbar, Navbar1, Nav_Menu } from "../components/Nav/Navbar";
 import { ProductDetails } from "../components/ProductDetailsPage/ProductDetails";
-import CovidRoutes from "../components/ProductPage/covidRoutes";
+import {CovidRoutes} from "../components/ProductPage/covidRoutes";
 import Diabeties from "../components/ProductPage/diabetiesRoutes";
 import Login from "../components/Login/Login";
 import { Footer } from "../components/Footer/Footer";

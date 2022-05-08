@@ -8,6 +8,8 @@ function ExistingUser() {
   const { singleperson } = useContext(UserContext)
   console.log("q", singleperson)
   const navigate = useNavigate()
+
+
   const verifyOtp = async (e) => {
     e.preventDefault();
     if (otp == "" || otp == null) {

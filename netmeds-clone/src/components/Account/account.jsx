@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const Account = () => {
 
-    const [user, setUser] = React.useState({});
+    const [user, setUser] = React.useState([]);
     const [firstName, setFirstName] = React.useState("");
     const [firstNameLength, setFirstNameLength] = React.useState("");
 
@@ -39,8 +39,8 @@ export const Account = () => {
 
         <>
             <Navbar />
-            {/* <Navbar1 />
-            <Nav_Menu /> */}
+            <Navbar1 />
+            <Nav_Menu />
 
             <div className="account-container">
                 <div className="headerr">

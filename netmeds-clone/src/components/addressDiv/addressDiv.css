@@ -3,7 +3,7 @@
 .addressImage_background{
     background-image: url("../../images/orderpage.png");
     /* background-color: red; */
-    margin-top: -260px;
+    margin-top: 00px;
     margin-left: 0;
     margin-right: 0;
     position: fixed;
@@ -42,7 +42,7 @@
     height: 700px;
     margin-left: 1070px;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 250px;
     
     
 }

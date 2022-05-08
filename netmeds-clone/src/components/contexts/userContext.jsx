@@ -26,7 +26,7 @@ export const UserContextProvider=({children})=>{
     })
     if(payment==true){
         cartFetch()
-        }
+    }
     async function cartFetch(){
         const userID=JSON.parse(localStorage.getItem("users"));
         console.log(userID)

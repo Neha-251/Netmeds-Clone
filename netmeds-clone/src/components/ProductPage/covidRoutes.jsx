@@ -6,7 +6,7 @@ import "./productRouters.css";
 import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
 
 
-function CovidRoutes() {
+export function CovidRoutes() {
 
   return (
 
@@ -31,4 +31,3 @@ function CovidRoutes() {
   )
 }
 
-export default CovidRoutes;

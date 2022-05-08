@@ -32,7 +32,7 @@ function Login() {
       const data=await fetch("https://netmedback.herokuapp.com/users");
       const respondData=await data.json();
       const resData=respondData.users
-      console.log(resData);
+      console.log("resData", resData);
       var count=0
       for(var i=0;i<resData.length;i++){
         if(resData[i].number==num){

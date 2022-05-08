@@ -50,7 +50,8 @@ export const PaymentDiv = () => {
                     <label>CVV</label>
                     <input type="text"  name="firstName"  placeholder="" /> <br />
                     <label>NAME ON CARD</label>
-                    <input className="addressSubmit" value="SAVE ADDRESS" type="submit" />
+                    <input type="text"  name="firstName"  placeholder="" /> <br />
+                    <input className="addressSubmit" value="Pay" type="submit" />
 
                 </form>
             </div>

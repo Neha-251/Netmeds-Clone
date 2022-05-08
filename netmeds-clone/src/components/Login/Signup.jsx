@@ -24,6 +24,8 @@ function Signup() {
   const fetchUserData=async()=>{
     const userdata=await fetch("https://netmedback.herokuapp.com/users");
     const res= await userdata.json();
+    console.log('res', res)
+
     localStorage.setItem("users",JSON.stringify(res.users[res.users.length-1]));
     navigate("/covid");
   }
@@ -59,7 +61,8 @@ function Signup() {
               <input onChange={handleForm} type="text" id="firstName" placeholder="Your First Name"/>
               <label htmlFor="">LAST NAME</label>
               <input onChange={handleForm} type="text" id="lastName" placeholder="Your Last Name"/>
-              <input type="text" onChange={(e)=>setOtp(e.target.value)} placeholder="Enter OTP"></input>
+              <label htmlFor="">ENTER OTP</label>
+              <input type="password" onChange={(e)=>setOtp(e.target.value)} placeholder="Enter OTP" className="otpClass"></input>
               <button type="submit" id="verify">VERIFY</button>
             </form>
 
