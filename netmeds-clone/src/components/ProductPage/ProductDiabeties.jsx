@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import "./Products.css"
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
+
+
 function ProductsDiabeties() {
     const [products,setProducts]=useState([]);
     
@@ -78,6 +81,13 @@ function ProductsDiabeties() {
     }
     
   return (
+
+    <>
+    {/* <Navbar />
+    <Navbar1 />
+    <Nav_Menu /> */}
+
+
     <div className='product-right'>
         <div className='banner'>
             <img src={require("../../images/bannerDia.jpg")} alt=""></img>
@@ -153,6 +163,7 @@ function ProductsDiabeties() {
         </div>
         
     </div>
+    </>
   )
 }
 

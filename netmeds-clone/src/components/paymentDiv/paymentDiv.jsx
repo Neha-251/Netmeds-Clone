@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./paymentDiv.css";
 import "../../images/orderpage.png";
 import { useNavigate, Link } from "react-router-dom";
-
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
 
 export const PaymentDiv = () => {
 
@@ -21,6 +21,13 @@ export const PaymentDiv = () => {
 
 
     return (
+
+
+        <>
+
+        <Navbar />
+    <Navbar1 />
+    <Nav_Menu />
 
 
         <div className="addressImage_background">
@@ -48,6 +55,8 @@ export const PaymentDiv = () => {
                 </form>
             </div>
         </div>
+
+        </>
     )
 
 

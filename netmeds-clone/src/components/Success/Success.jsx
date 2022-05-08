@@ -1,10 +1,18 @@
 import "./Success.css";
 import { Link } from "react-router-dom";
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
 
 export const Success= ()=>{
     var name = JSON.parse(localStorage.getItem("users"));
     
     return (
+
+        <>
+        <Navbar />
+    <Navbar1 />
+    <Nav_Menu />
+
+
         <div className="maindiv">
             <div className="name">Dear {name.firstName}</div>
             <div className="imgdiv">
@@ -21,5 +29,6 @@ export const Success= ()=>{
             </div>
 
         </div>
+        </>
     )
 }

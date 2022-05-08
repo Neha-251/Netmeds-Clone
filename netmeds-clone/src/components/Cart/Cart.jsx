@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useReducer } from "react";
 import axios from "axios";
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
 
 
 
@@ -115,7 +116,7 @@ export const Cart = () => {
             console.log('data_get_cart', data)
 
 
-            
+
 
 
             let userdata = JSON.parse(localStorage.getItem("users"))
@@ -125,9 +126,9 @@ export const Cart = () => {
 
 
             let user_based_data = [];
-            
-            for(let i = 0; i < data.cart.length; i++){
-                if(data.cart[i].user_id === userId){
+
+            for (let i = 0; i < data.cart.length; i++) {
+                if (data.cart[i].user_id === userId) {
                     user_based_data.push(data.cart[i]);
                 }
             }
@@ -139,7 +140,7 @@ export const Cart = () => {
             calculateTotal(user_based_data);
 
 
-            
+
 
         }
         catch (err) {
@@ -220,182 +221,190 @@ export const Cart = () => {
     }, [reRender])
 
     return (
-        <div className="cartMain">
-            <h2>Order Summary</h2>
-            <div className="cartMainContainer">
 
-                {/* export const Cart = () => { */}
-                <div className="cartContainer_1">
-                    <h5>PRODUCTS</h5>
-
-                    <div className="productsShow_div">
+        <>
+            <Navbar />
+         
 
 
-                        {
-                            cartData.map((el) => {
-                                // console.log("el_name", el);
+            <div className="cartMain">
+                <h2>Order Summary</h2>
+                <div className="cartMainContainer">
+
+                    {/* export const Cart = () => { */}
+                    <div className="cartContainer_1">
+                        <h5>PRODUCTS</h5>
+
+                        <div className="productsShow_div">
+
+
+                            {
+                                cartData.map((el) => {
+                                    // console.log("el_name", el);
 
 
 
-                                return (
-                                    <div className="product_subdiv">
-                                        <div className="pro_div1">
-                                            <div>
+                                    return (
+                                        <div className="product_subdiv">
+                                            <div className="pro_div1">
+                                                <div>
 
 
-                                                <img className="img_pro" src={el.product_id.img} alt="" />
+                                                    <img className="img_pro" src={el.product_id.img} alt="" />
 
-                                            </div>
-                                            <div>
-                                                <p className="elName">{el.product_id.name}</p>
-                                                {/* <p className="elNos">{el.nos}</p> */}
-
-                                                <p className="elMkt">{el.product_id.mkt}</p>
-
-                                                <div className="priceDiv">
-                                                    <p className="elPrice">Rs {el.product_id.price}</p>
-                                                    <p className="elstprice">Rs {el.product_id.stprice}</p>
                                                 </div>
+                                                <div>
+                                                    <p className="elName">{el.product_id.name}</p>
+                                                    {/* <p className="elNos">{el.nos}</p> */}
 
-                                                <div className="delivery_p">Delivery between May 5 5PM-May 6 10PM</div>
-                                            </div>
-                                        </div>
-                                        <div className="pro_div2">
-                                            <div>
-                                                <div>-</div>
-                                                <div>QTY {el.nos}</div>
-                                                <div>+</div>
-                                            </div>
-                                            <div>
-                                                <button
-                                                    onClick={() => handleRemove(el._id, el)}
-                                                >Remove</button>
-                                                <button>Save For Later</button>
-                                            </div>
-                                        </div>
+                                                    <p className="elMkt">{el.product_id.mkt}</p>
 
-                                    </div>
-                                )
-                            })
-                        }
+                                                    <div className="priceDiv">
+                                                        <p className="elPrice">Rs {el.product_id.price}</p>
+                                                        <p className="elstprice">Rs {el.product_id.stprice}</p>
+                                                    </div>
+
+                                                    <div className="delivery_p">Delivery between May 5 5PM-May 6 10PM</div>
+                                                </div>
+                                            </div>
+                                            <div className="pro_div2">
+                                                <div>
+                                                    <div>-</div>
+                                                    <div>QTY {el.nos}</div>
+                                                    <div>+</div>
+                                                </div>
+                                                <div>
+                                                    <button
+                                                        onClick={() => handleRemove(el._id, el)}
+                                                    >Remove</button>
+                                                    <button>Save For Later</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    )
+                                })
+                            }
+
+                        </div>
 
                     </div>
-
-                </div>
-                <div className="cartContainer_2">
-                    {/* @ -80,7 +249,7 @@ export const Cart = () => { */}
-                    <div className="promoCode_Maindiv">
-                        <div>
-                            <h5>APPLY PROMOCODE / NMS SUPERCASH</h5>
-                        </div>
-
-                        <div className="promocode_div" onClick={handleCodeApply}>
+                    <div className="cartContainer_2">
+                        {/* @ -80,7 +249,7 @@ export const Cart = () => { */}
+                        <div className="promoCode_Maindiv">
                             <div>
-                                <div className={codeStatus === true ? "radioBtn_promoCode" : "radioBtn_promoCode_null"}>{codeStatus === true ? "" : "✔"}</div>
+                                <h5>APPLY PROMOCODE / NMS SUPERCASH</h5>
                             </div>
 
-                            <div>
-                                <h3 className="promoCode_h3">Apply Promo Code</h3>
-                            </div>
-                            <div className="downArrow">{codeStatus === true ? <TiArrowSortedDown /> : <TiArrowSortedUp />}  </div>
-                            {/* @ -99,31 +268,31 @@ export const Cart = () => { */}
-
-                        </div>
-
-
-
-                        <div className={codeStatus === true ? "applyPromo_none" : "applyPromo_block"}>
-
-                            <div className="inp_div">
-                                <p>PROMOCODE</p>
-                                <input className="code_inp" type="text" placeholder="Have a promocode? Enter Here" />
-                                <Button>Apply</Button>
-                            </div>
-
-                            <div className="code_div">
-                                <div className={applyCodeS1 === true ? "apply_promoCode_radio" : "apply_promoCode_radio_null"} onClick={applyCode1}>{applyCodeS1 === true ? "" : "✔"}</div>
-                                {/* <div className={applyCodeS1 === false ? "apply_promoCode_radio_null" : "apply_promoCode_radio"} onClick={applyCode1}>{applyCodeS1 === true ? "" : "✔"}</div> */}
+                            <div className="promocode_div" onClick={handleCodeApply}>
                                 <div>
-                                    <p className="code_heading">NMSH100</p>
-                                    <p className="code_details">Flat 20% off on medicines + 100% NMS SuperCash on orders above Rs. 500. Valid today only. T&C Apply</p>
-                                    <p className="code_details">Apply this coupon to get Flat 20% off on orders above Rs. 500. Valid today only. T&C Apply</p>
+                                    <div className={codeStatus === true ? "radioBtn_promoCode" : "radioBtn_promoCode_null"}>{codeStatus === true ? "" : "✔"}</div>
                                 </div>
-                            </div>
-                            <div className="code_div">
-                                <div className={applyCodeS2 === true ? "apply_promoCode_radio" : "apply_promoCode_radio_null"} onClick={applyCode2}>{applyCodeS2 === true ? "" : "✔"}</div>
-                                {/* <div className={applyCodeS2 === false ? "apply_promoCode_radio_null" : "apply_promoCode_radio"} onClick={applyCode2}>{applyCodeS2 === true ? "" : "✔"}</div> */}
-                                <div>
-                                    <p className="code_heading">FULL100</p>
-                                    <p className="code_details">Get flat 25% off on meds + 100% NMS SuperCash on your First meds order. No minimum order value.</p>
-                                    <p className="code_details">Apply this coupon to get flat 5% off on . No minimum order value.</p>
-                                </div>
-                            </div>
-                            <div className="code_div">
-                                <div className={applyCodeS3 === true ? "apply_promoCode_radio" : "apply_promoCode_radio_null"} onClick={applyCode3}>{applyCodeS3 === true ? "" : "✔"}</div>
-                                {/* <div className={applyCodeS3 === false ? "apply_promoCode_radio_null" : "apply_promoCode_radio"} onClick={applyCode3}>{applyCodeS3 === true ? "" : "✔"}</div> */}
-                                <div>
-                                    <p className="code_heading">DUO100</p>
-                                    <p className="code_details">Get flat 20% off on meds + 100% NMS SuperCash on your meds order. Minimum order value: Rs. 999.</p>
-                                    <p className="code_details">Apply this coupon to get flat 25% off on your order. Minimum order value: Rs. 999.</p>
-                                </div>
-                            </div>
-                            <div className="code_div">
-                                <div className={applyCodeS4 === true ? "apply_promoCode_radio" : "apply_promoCode_radio_null"} onClick={applyCode4}>{applyCodeS4 === true ? "" : "✔"}</div>
-                                {/* <div className={applyCodeS4 === false ? "apply_promoCode_radio_null" : "apply_promoCode_radio"} onClick={applyCode4}>{applyCodeS4 === true ? "" : "✔"}</div> */}
-                                <div>
-                                    <p className="code_heading">BOWL100</p>
-                                    <p className="code_details">Apply this coupon to get flat 15% off on your meds order. Minimum order value: Rs. 399.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        {/* @ -136,23 +305,29 @@ export const Cart = () => { */}
-
-
-                        <div className="paymentDetails_Maindiv">
-                            <h5>PAYMENT DETAILS</h5>
-                            <div>
-                                <div className="leftSidePayment_subDiv">MRP Total</div>
-                                <div className="rightSidePayment_subDiv">Rs {deleteStatus === false ? mrpTotal : mrpTotal / 2}</div>
-                            </div>
-                            <div>
-                                <div className="leftSidePayment_subDiv">Netmeds Discount</div>
-                                <div className="rightSidePayment_subDiv">Rs
-                                    {discount1}
-                                </div>
-                            </div>
-                            <div>
-
-                                <div className="leftSidePayment_subDiv total_p">Total Amount</div>
-                                <div className="rightSidePayment_subDiv">Rs
-                                    {deleteStatus === false ? mrpTotal - discount1 : (mrpTotal / 2) - discount1}
-                                    {/* {totalAmount} */}
-                                </div>
-                            </div>
-
-                            <div className="savings_div">TOTAL SAVINGS {discount1}</div>
-
-                            <div className="totalAmount_mainDiv">
 
                                 <div>
-                                    <div>Total Amount</div>
-                                    <div>Rs
+                                    <h3 className="promoCode_h3">Apply Promo Code</h3>
+                                </div>
+                                <div className="downArrow">{codeStatus === true ? <TiArrowSortedDown /> : <TiArrowSortedUp />}  </div>
+                                {/* @ -99,31 +268,31 @@ export const Cart = () => { */}
+
+                            </div>
+
+
+
+                            <div className={codeStatus === true ? "applyPromo_none" : "applyPromo_block"}>
+
+                                <div className="inp_div">
+                                    <p>PROMOCODE</p>
+                                    <input className="code_inp" type="text" placeholder="Have a promocode? Enter Here" />
+                                    <Button>Apply</Button>
+                                </div>
+
+                                <div className="code_div">
+                                    <div className={applyCodeS1 === true ? "apply_promoCode_radio" : "apply_promoCode_radio_null"} onClick={applyCode1}>{applyCodeS1 === true ? "" : "✔"}</div>
+                                    {/* <div className={applyCodeS1 === false ? "apply_promoCode_radio_null" : "apply_promoCode_radio"} onClick={applyCode1}>{applyCodeS1 === true ? "" : "✔"}</div> */}
+                                    <div>
+                                        <p className="code_heading">NMSH100</p>
+                                        <p className="code_details">Flat 20% off on medicines + 100% NMS SuperCash on orders above Rs. 500. Valid today only. T&C Apply</p>
+                                        <p className="code_details">Apply this coupon to get Flat 20% off on orders above Rs. 500. Valid today only. T&C Apply</p>
+                                    </div>
+                                </div>
+                                <div className="code_div">
+                                    <div className={applyCodeS2 === true ? "apply_promoCode_radio" : "apply_promoCode_radio_null"} onClick={applyCode2}>{applyCodeS2 === true ? "" : "✔"}</div>
+                                    {/* <div className={applyCodeS2 === false ? "apply_promoCode_radio_null" : "apply_promoCode_radio"} onClick={applyCode2}>{applyCodeS2 === true ? "" : "✔"}</div> */}
+                                    <div>
+                                        <p className="code_heading">FULL100</p>
+                                        <p className="code_details">Get flat 25% off on meds + 100% NMS SuperCash on your First meds order. No minimum order value.</p>
+                                        <p className="code_details">Apply this coupon to get flat 5% off on . No minimum order value.</p>
+                                    </div>
+                                </div>
+                                <div className="code_div">
+                                    <div className={applyCodeS3 === true ? "apply_promoCode_radio" : "apply_promoCode_radio_null"} onClick={applyCode3}>{applyCodeS3 === true ? "" : "✔"}</div>
+                                    {/* <div className={applyCodeS3 === false ? "apply_promoCode_radio_null" : "apply_promoCode_radio"} onClick={applyCode3}>{applyCodeS3 === true ? "" : "✔"}</div> */}
+                                    <div>
+                                        <p className="code_heading">DUO100</p>
+                                        <p className="code_details">Get flat 20% off on meds + 100% NMS SuperCash on your meds order. Minimum order value: Rs. 999.</p>
+                                        <p className="code_details">Apply this coupon to get flat 25% off on your order. Minimum order value: Rs. 999.</p>
+                                    </div>
+                                </div>
+                                <div className="code_div">
+                                    <div className={applyCodeS4 === true ? "apply_promoCode_radio" : "apply_promoCode_radio_null"} onClick={applyCode4}>{applyCodeS4 === true ? "" : "✔"}</div>
+                                    {/* <div className={applyCodeS4 === false ? "apply_promoCode_radio_null" : "apply_promoCode_radio"} onClick={applyCode4}>{applyCodeS4 === true ? "" : "✔"}</div> */}
+                                    <div>
+                                        <p className="code_heading">BOWL100</p>
+                                        <p className="code_details">Apply this coupon to get flat 15% off on your meds order. Minimum order value: Rs. 399.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            {/* @ -136,23 +305,29 @@ export const Cart = () => { */}
+
+
+                            <div className="paymentDetails_Maindiv">
+                                <h5>PAYMENT DETAILS</h5>
+                                <div>
+                                    <div className="leftSidePayment_subDiv">MRP Total</div>
+                                    <div className="rightSidePayment_subDiv">Rs {deleteStatus === false ? mrpTotal : mrpTotal / 2}</div>
+                                </div>
+                                <div>
+                                    <div className="leftSidePayment_subDiv">Netmeds Discount</div>
+                                    <div className="rightSidePayment_subDiv">Rs
+                                        {discount1}
+                                    </div>
+                                </div>
+                                <div>
+
+                                    <div className="leftSidePayment_subDiv total_p">Total Amount</div>
+                                    <div className="rightSidePayment_subDiv">Rs
                                         {deleteStatus === false ? mrpTotal - discount1 : (mrpTotal / 2) - discount1}
+                                        {/* {totalAmount} */}
+                                    </div>
+                                </div>
+
+                                <div className="savings_div">TOTAL SAVINGS {discount1}</div>
+
+                                <div className="totalAmount_mainDiv">
+
+                                    <div>
+                                        <div>Total Amount</div>
+                                        <div>Rs
+                                            {deleteStatus === false ? mrpTotal - discount1 : (mrpTotal / 2) - discount1}
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <Link to="/orderReview">
+                                            <button>PROCEED</button>
+                                        </Link>
                                     </div>
 
                                 </div>
-                                <div>
-                                    <Link to="/orderReview">
-                                        <button>PROCEED</button>
-                                    </Link>
-                                </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </>
 
     )
 

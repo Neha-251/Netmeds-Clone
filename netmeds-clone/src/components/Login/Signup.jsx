@@ -3,6 +3,8 @@ import './Signup.css';
 import Image1 from '../../images/login.png';
 import { UserContext } from "../contexts/userContext";
 import { useNavigate } from "react-router-dom";
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
+
 function Signup() {
   const {gotoHome}=useContext(UserContext)
   const {handleDetails}=useContext(UserContext);
@@ -35,6 +37,15 @@ function Signup() {
   }
   
   return (
+
+    <>
+
+    <Navbar />
+    <Navbar1 />
+    <Nav_Menu />
+
+
+
     <div className="Signup">
         <div className="signupImg">
       <img src={Image1} alt="" />
@@ -55,6 +66,8 @@ function Signup() {
         </div>
         </div>
     </div>
+
+    </>
   )
 }
 

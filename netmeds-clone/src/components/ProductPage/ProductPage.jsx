@@ -5,9 +5,20 @@ import { useState } from 'react'
 import {Link, Route,Routes} from "react-router-dom"
 import "./ProductPage.css"
 import ProductsDiabeties from './ProductDiabeties'
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
+
+
+
 function ProductPage() {
   const [product,setProduct]=useState("covid")
   return (
+
+<>
+    <Navbar />
+    <Navbar1 />
+    <Nav_Menu />
+
+
     <div className='product-page'>
       <Link className='link' to="/covid">covid</Link>
       <Link className='link' to="/diabeties">diabeties</Link>
@@ -16,6 +27,8 @@ function ProductPage() {
       <Link className='link' to="/covid">ayurvedic</Link>
       <Link className='link' to="/diabeties">homeopathy</Link>
     </div>
+
+    </>
   )
 }
 

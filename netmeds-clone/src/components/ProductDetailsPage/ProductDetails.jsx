@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import "./ProductDetails.css"
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
+
+
 function ProductDetails() {
     const [product,setProduct]=useState({})
     const [userandproduct,setUserandproduct]=useState({
@@ -47,6 +50,13 @@ function ProductDetails() {
         })
     }
   return (
+
+    <>
+    <Navbar />
+    <Navbar1 />
+    <Nav_Menu />
+
+
     <div className='product-details'>
         <div className='details-container'>
             <div className='image-part'>
@@ -71,6 +81,7 @@ function ProductDetails() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 

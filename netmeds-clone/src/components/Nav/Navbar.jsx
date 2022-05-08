@@ -75,7 +75,7 @@ export const Navbar = () => {
             <div className="navbox">
                 <Link to="/" className="logoimage-div"><img src="https://www.netmeds.com/assets/gloryweb/images/home-logo-netmeds-new.svg" alt="" className="logoimage" /></Link>
                 <div className="input-div">
-                    <div className="delivery-add">Delivery to</div>
+                    <div className="delivery-add">Delivery to {userData.firstName}</div>
                     <input type="text" className="navinput" />
                 </div>
                 <div className="blank">Upload</div>

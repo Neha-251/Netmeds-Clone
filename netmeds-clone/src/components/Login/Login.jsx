@@ -9,7 +9,10 @@ import { UserContext } from "../contexts/userContext";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { OtpContext } from "../contexts/otpContext";
-import { Nav_Menu } from "../Nav/Navbar";
+
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
+
+
 function Login() {
   const {singleUser}=useContext(UserContext)
   const [num,setNum]=useState("");
@@ -55,7 +58,14 @@ if(valid=="valid"){
 }
 
   return (
+    <>
+
+    <Navbar />
+    <Navbar1 />
+    <Nav_Menu />
+
     <div className="loginBox">
+      
       <div className="loginImg">
       <img src={require("../../images/login.png")} alt="" />
       </div>
@@ -85,7 +95,9 @@ if(valid=="valid"){
 
       </div>
     </div>
+    </>
   );
+
 }
 
 export default Login;

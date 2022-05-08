@@ -16,13 +16,13 @@ import{Payment} from "../components/Payments/Payment"
 import UserDetails from "../components/UserDetails/UserDetails";
 import {Success} from "../components/Success/Success"
 import { PaymentDiv } from "../components/paymentDiv/paymentDiv";
+import {Account} from "../components/Account/account";
 
 export const AllRoutes = () => {
     return (
         <>
-            <Navbar />
-            <Navbar1 />
-            <Nav_Menu />
+            
+           
             <Routes>
                 <Route path="/cart" element={<Cart />}></Route>
                 <Route path="/orderReview" element={<OrderReview/>}></Route>
@@ -35,9 +35,10 @@ export const AllRoutes = () => {
                 <Route path="/" element={<Body/>}></Route>
                 <Route path="/existing" element={<ExistingUser/>}></Route>
                 <Route path="/payment" element={<Payment></Payment>}></Route>
-                <Route path="/account/user-details" element={<UserDetails/>}></Route>
+                <Route path="/account/user-details" element={<Account/>}></Route>
                 <Route path="/success" element={<Success></Success>}></Route>
                 <Route path="/paymentDiv" element={<PaymentDiv/>}></Route>
+              
             </Routes>
 
         </>

@@ -7,7 +7,7 @@ import { useState, useEffect, useReducer, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { UserContext } from "../contexts/userContext";
-
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
 
 
 
@@ -202,6 +202,15 @@ export const Payment = () => {
 
 
     return (
+
+        <>
+
+        <Navbar />
+    <Navbar1 />
+    <Nav_Menu />
+
+
+
         <div className="cartMain">
 
 
@@ -437,6 +446,7 @@ export const Payment = () => {
             </div>
         </div>
 
+        </>
     )
 
 

@@ -7,7 +7,7 @@ import { FaLuggageCart, FaRupeeSign } from "react-icons/fa";
 import { useState, useEffect, useReducer } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
 
 
 
@@ -249,6 +249,14 @@ export const OrderReview = () => {
 
 
     return (
+
+<>
+        <Navbar />
+    <Navbar1 />
+    <Nav_Menu />
+
+
+
         <div className="cartMain">
 
 
@@ -426,6 +434,8 @@ export const OrderReview = () => {
                 </div>
             </div>
         </div>
+
+        </>
 
     )
 

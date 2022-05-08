@@ -1,13 +1,21 @@
 import { color, height } from "@mui/system";
 import * as React from "react";
-
+import { Navbar, Navbar1, Nav_Menu } from "../Nav/Navbar";
 import "./body.css";
 import  {Slider} from "./slider.jsx";
 
 
 export const Body = ()=>{
 	return (
+<>
+
+		<Navbar />
+    <Navbar1 />
+    <Nav_Menu />
+
+
 		<div>
+
 		     <Slider/>
 
 			  {/* <div className="B_three">
@@ -235,6 +243,6 @@ We have been named as the 'Best Digital Healthcare Start-up' by ET Now World Hea
 
 		</div>
 
-		
+		</>
 	)
 }
